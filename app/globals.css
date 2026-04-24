@@ -1779,6 +1779,11 @@ code {
     line-height: 1.25;
   }
 
+  /* Fixed nav is taller on mobile (2 rows), so push hero down more */
+  .hero-v2-left {
+    padding-top: 8.5rem;
+  }
+
   .tl-item {
     grid-template-columns: 1fr;
     gap: 0.45rem;
