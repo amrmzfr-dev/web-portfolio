@@ -45,7 +45,7 @@ export default function OzonePage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">Ozone Machine<br /><em>IoT System</em></h1>
-            <p className="proj-subtitle">Full-stack IoT billing and management system — firmware to dashboard.</p>
+            <p className="proj-subtitle">Retrofitting existing ozone machines with ESP32 intelligence — precise session billing, timestamped records, and live fleet visibility where there was nothing before.</p>
             <div className="proj-tags-row">
               <span className="tag">ESP32</span>
               <span className="tag">Go / Gin</span>
@@ -61,7 +61,7 @@ export default function OzonePage() {
               alt="Ozone machine IoT system — ESP32 firmware to Go/Gin backend to React dashboard"
               width={834}
               height={299}
-              style={{ width: '100%', height: 'auto', opacity: 0.9 }}
+              style={{ width: '100%', height: 'auto', opacity: 0.92 }}
               priority
             />
           </div>
@@ -81,24 +81,32 @@ export default function OzonePage() {
           <div className="proj-main">
 
             <div className="content-block">
-              <div className="sec-label">The problem</div>
-              <h2 className="content-heading">Managing ozone machines <em>at scale</em></h2>
-              <p className="content-text">Clients using ozone machines for car interior sanitisation needed a way to track usage per machine, bill accurately by session, and monitor device health remotely — without any existing infrastructure to build on. The system had to work reliably in automotive workshops where network conditions are inconsistent and devices may lose power mid-session.</p>
+              <div className="sec-label">Before</div>
+              <h2 className="content-heading">A machine that couldn&apos;t prove <em>it worked</em></h2>
+              <p className="content-text">Before my involvement, the ozone machines ran on three Autonics electromechanical session counters — one per service tier (Basic, Standard, Premium). A session ended, a relay tripped, a counter incremented. That was the entire telematic system. No timestamps. No session IDs. No remote visibility. Billing meant someone physically reading three numeric displays and reconciling against a paper log at month-end.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>If the machine lost power mid-session, if a relay stuck, if a treatment ran over its allotted time — no system recorded it. The data was a running total, not a history. Disputes were impossible to resolve. Inaccurate billing was absorbed as a cost of doing business.</p>
             </div>
 
             <div className="content-block">
-              <div className="sec-label">Gallery</div>
-              <h2 className="content-heading">System <em>in action</em></h2>
+              <div className="sec-label">The intervention</div>
+              <h2 className="content-heading">ESP32 as the <em>brain</em></h2>
+              <p className="content-text">I designed and built a retrofit hardware board around the ESP32-WROOM. It fits inside the same metal enclosure, connects to the same button inputs and relay chain the machine already had — but now the ESP32 intercepts every session event before the counter sees it. I added a relay control module, a voltage sensor for power state monitoring, and WiFi connectivity. Same machine exterior. Same cost to the client. But now every session generates a timestamped, structured record that travels over WiFi to a PostgreSQL database.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>The original Autonics counters still spin — they&apos;re now just displays. The system is upstream of them.</p>
+            </div>
+
+            <div className="content-block">
+              <div className="sec-label">Development</div>
+              <h2 className="content-heading">From bench <em>to field</em></h2>
               <div className="proj-gallery">
-                <OzonePhoto
-                  src="/images/ozone/hardware-board.jpg"
-                  alt="Full hardware board inside the ozone machine enclosure"
-                  caption="Hardware board"
-                />
                 <OzonePhoto
                   src="/images/ozone/early-prototype.jpg"
                   alt="Early ESP32 prototype on development bench"
-                  caption="Early prototype"
+                  caption="Bench prototype"
+                />
+                <OzonePhoto
+                  src="/images/ozone/hardware-board.jpg"
+                  alt="Full hardware board inside the ozone machine enclosure"
+                  caption="Installed board"
                 />
                 <OzonePhoto
                   src="/images/ozone/rnd-machine.jpg"
@@ -111,7 +119,7 @@ export default function OzonePage() {
             <div className="content-block">
               <div className="sec-label">Architecture</div>
               <h2 className="content-heading">Firmware to <em>frontend</em></h2>
-              <p className="content-text">The system is built in three distinct layers, each independently deployable and testable.</p>
+              <p className="content-text">Three independently deployable layers — ESP32 firmware intercepting machine events, a Go/Gin backend storing and analysing records, and a React dashboard giving clients visibility they never had before.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
                   <div className="arch-layer-label">Firmware (ESP32)</div>
@@ -187,7 +195,7 @@ export default function OzonePage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Key achievement</div>
-              <div className="sidebar-val">37-test pre-production suite. Clock integrity architecture handling power-loss edge cases. Live billing in production.</div>
+              <div className="sidebar-val">37-test pre-production suite. Clock integrity architecture handling power-loss edge cases. Live billing replacing paper logs in production.</div>
             </div>
           </div>
         </div>
