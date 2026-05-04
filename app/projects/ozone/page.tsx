@@ -130,7 +130,7 @@ export default function OzonePage() {
                 <div className="arch-layer">
                   <div className="arch-layer-label">Firmware (ESP32)</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">ClockSource integrity: NTP to NVS anchor fallback</div>
+                    <div className="arch-item">Clock integrity: NTP → hardware RTC → NVS anchor → millis fallback</div>
                     <div className="arch-item">Session tracking with hardware watchdog</div>
                     <div className="arch-item">Retry queue for offline resilience</div>
                     <div className="arch-item">POST payloads with clock_source field</div>
@@ -141,7 +141,7 @@ export default function OzonePage() {
                 <div className="arch-layer">
                   <div className="arch-layer-label">Backend (Go / Gin)</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">REST API with API key auth per device</div>
+                    <div className="arch-item">REST API with JWT auth for dashboard routes</div>
                     <div className="arch-item">PostgreSQL with TIMESTAMPTZ + clock_source columns</div>
                     <div className="arch-item">Usage analytics with UTC+8 grouping</div>
                     <div className="arch-item">Monthly treatment report generation</div>
@@ -165,7 +165,7 @@ export default function OzonePage() {
               <h2 className="content-heading">Data integrity on <em>unreliable hardware</em></h2>
               <p className="content-text">The core challenge wasn&apos;t keeping the hardware running. It was making every record trustworthy. Two problems had to be solved independently before the system could be considered reliable for billing.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>First: phantom counts. The old stack listened at an optocoupler after relay chatter. One real treatment could look like two or three pulses to software. Debouncing a passive tap could not fix the deeper problem, because the generator could already be running while firmware caught up. After the retrofit the ESP32 owns the start decision: it validates a press, commits the record, and only then energises the generator path. One intentional firmware start lines up with one physical treatment.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>Second: timestamp accuracy. The previous system timestamped sessions at server receive time. Machines in workshops lose WiFi regularly: a power cut, a router reboot, or a dead spot. When connectivity restored, the server received all buffered sessions simultaneously, stamping every one with the reconnection time. A week&apos;s data would appear as a single day. I solved this by having the ESP32 timestamp each session at the moment it occurs and persist that timestamp to NVS flash before any network attempt. When the device reconnects after days offline, each session carries the time it actually happened. The <code>ClockSource</code> enum tracks whether each record is NTP synced, NVS anchored, or an estimated fallback, and that tells the backend the confidence level of each timestamp, so the analytics layer can handle edge cases explicitly rather than silently accepting bad data.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>Second: timestamp accuracy. The previous system timestamped sessions at server receive time. Machines in workshops lose WiFi regularly: a power cut, a router reboot, or a dead spot. When connectivity restored, the server received all buffered sessions simultaneously, stamping every one with the reconnection time. A week&apos;s data would appear as a single day. I solved this by having the ESP32 timestamp each session at the moment it occurs and persist that timestamp to NVS flash before any network attempt. When the device reconnects after days offline, each session carries the time it actually happened. The <code>ClockSource</code> enum captures the confidence of every timestamp: NTP-synced at the top, then hardware RTC validated, then NVS-anchored fallback when the RTC has lost power, then millis-only as a last resort. The backend reads this field on every record and the analytics layer automatically quarantines low-confidence sources from billing reports, so bad data is surfaced explicitly rather than silently accepted.</p>
               <div className="proj-dashboard-capture">
                 <div className="photo-frame">
                   <Image

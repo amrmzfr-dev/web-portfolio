@@ -32,7 +32,7 @@ export default function CCTVPage() {
 
         <div className="proj-overview">
           <div className="overview-stat"><div className="stat-val">Live</div><div className="stat-label">Consumer app integrated</div></div>
-          <div className="overview-stat"><div className="stat-val">Two layer</div><div className="stat-label">API key auth system</div></div>
+          <div className="overview-stat"><div className="stat-val">3-layer</div><div className="stat-label">Auth system</div></div>
           <div className="overview-stat"><div className="stat-val">C SDK</div><div className="stat-label">Native bindings wrapped</div></div>
           <div className="overview-stat"><div className="stat-val">MY</div><div className="stat-label">Infrastructure localised</div></div>
         </div>
@@ -49,7 +49,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">Architecture</div>
               <h2 className="content-heading">Python wrapping <em>native C</em></h2>
-              <p className="content-text">The core challenge was surfacing the Dahua NetSDK, a C library, as a stable, authenticated HTTP API. I wrote Python bindings over the C library, then built a clean REST layer on top using Python&apos;s WSGI stack.</p>
+              <p className="content-text">The core challenge was surfacing the Dahua NetSDK as a stable, authenticated HTTP API. I integrated Dahua&apos;s NetSDK Python package (ctypes bindings over the C DLL), then built a REST layer on top using Python&apos;s WSGI stack: Flask routes, Gunicorn workers, Nginx reverse proxy. The server runs in Listen Server mode: cameras actively register inbound connections to the server rather than the server polling them, which is why the system works without opening firewall rules on the camera side.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
                   <div className="arch-layer-label">Consumer App (external agency)</div>
@@ -63,8 +63,8 @@ export default function CCTVPage() {
                   <div className="arch-layer-label">CCTV API Server (Python)</div>
                   <div className="arch-layer-items">
                     <div className="arch-item">REST API layer: camera endpoints, auth, routing</div>
-                    <div className="arch-item">Dual API key layers: admin keys versus client keys, stored in DB</div>
-                    <div className="arch-item">Python bindings over Dahua NetSDK C library</div>
+                    <div className="arch-item">Three-layer auth: admin key (env var), client API keys (DB), stream tokens (DB, per-device)</div>
+                    <div className="arch-item">Dahua NetSDK Python package wrapping ctypes calls to the C DLL</div>
                     <div className="arch-item">Session management and camera state tracking</div>
                   </div>
                 </div>
@@ -74,6 +74,7 @@ export default function CCTVPage() {
                   <div className="arch-layer-items">
                     <div className="arch-item">NetSDK C library: native camera protocol</div>
                     <div className="arch-item">Physical CCTV infrastructure, Malaysia-hosted</div>
+                    <div className="arch-item">Active registration: cameras initiate connection to the API server (Listen Server mode)</div>
                   </div>
                 </div>
               </div>
@@ -81,9 +82,9 @@ export default function CCTVPage() {
 
             <div className="content-block">
               <div className="sec-label">Auth design</div>
-              <h2 className="content-heading">Two-layer <em>API key system</em></h2>
-              <p className="content-text">The system uses a two tier authentication model stored in a database. Admin API keys give full access to camera management and key provisioning. Client API keys give scoped access to specific cameras and operations. Both layers are validated per request, with keys stored securely, not hardcoded.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>This design lets the external agency operate independently with their own client key, without exposing admin-level operations. Revoking access is a single database record change.</p>
+              <h2 className="content-heading">Three-layer <em>auth system</em></h2>
+              <p className="content-text">The auth model has three layers, each scoped differently. The admin key (X-Admin-Key header) is a single secret stored as an environment variable with IP-based brute-force lockout: five failed attempts triggers a fifteen-minute block. Client API keys (X-Client-Key header) live in the database and authenticate the external agency globally, granting access to the API. Stream tokens (X-Stream-Token header) sit above that: they are issued per user per device, stored in the stream_tokens table with expiry and rotation, and gate the actual stream and playback endpoints.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>Revoking a client key is a single database record change (is_active = FALSE). Revoking the admin key requires rotating the environment variable. Stream tokens expire automatically and can be invalidated individually.</p>
             </div>
 
             <div className="content-block">
@@ -113,7 +114,7 @@ export default function CCTVPage() {
                 <div>Python</div>
                 <div>Dahua NetSDK (C)</div>
                 <div>REST API</div>
-                <div>PostgreSQL</div>
+                <div>MySQL</div>
                 <div>VPS · AlmaLinux</div>
               </div>
             </div>
