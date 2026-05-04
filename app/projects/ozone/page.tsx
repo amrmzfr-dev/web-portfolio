@@ -1,27 +1,34 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Ozone Machine IoT System — Amir',
 }
 
-/** Camera stroke icon aligned with `.photo-icon svg` styling in globals.css */
-function OzoneGalleryPlaceholder({ caption }: { caption: string }) {
+type OzonePhotoProps = {
+  src: string
+  alt: string
+  caption: string
+}
+
+function OzonePhoto({ src, alt, caption }: OzonePhotoProps) {
   return (
-    <div className="photo-frame">
-      <div className="photo-placeholder">
-        <div className="photo-icon">
-          <svg viewBox="0 0 24 24" aria-hidden>
-            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-            <circle cx="12" cy="13" r="3" />
-          </svg>
-        </div>
-        <p>{caption}</p>
+    <div className="proj-gallery-item">
+      <div className="photo-frame">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          style={{ objectFit: 'cover' }}
+          sizes="(max-width: 480px) 100vw, (max-width: 1024px) 34vw, 360px"
+        />
+        <div className="photo-corner tl" />
+        <div className="photo-corner tr" />
+        <div className="photo-corner bl" />
+        <div className="photo-corner br" />
       </div>
-      <div className="photo-corner tl"></div>
-      <div className="photo-corner tr"></div>
-      <div className="photo-corner bl"></div>
-      <div className="photo-corner br"></div>
+      <p className="gallery-caption">{caption}</p>
     </div>
   )
 }
@@ -30,21 +37,33 @@ export default function OzonePage() {
   return (
     <>
       <div className="proj-hero">
-        <div className="proj-hero-inner">
-          <Link href="/#projects" className="back-link">← Back to projects</Link>
-          <div className="proj-hero-meta">
-            <span className="proj-num-large">01</span>
-            <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
+        <div className="proj-hero-layout">
+          <div className="proj-hero-inner">
+            <Link href="/#projects" className="back-link">← Back to projects</Link>
+            <div className="proj-hero-meta">
+              <span className="proj-num-large">01</span>
+              <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
+            </div>
+            <h1 className="proj-title">Ozone Machine<br /><em>IoT System</em></h1>
+            <p className="proj-subtitle">Full-stack IoT billing and management system — firmware to dashboard.</p>
+            <div className="proj-tags-row">
+              <span className="tag">ESP32</span>
+              <span className="tag">Go / Gin</span>
+              <span className="tag">React</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">PostgreSQL</span>
+              <span className="tag">PlatformIO</span>
+            </div>
           </div>
-          <h1 className="proj-title">Ozone Machine<br /><em>IoT System</em></h1>
-          <p className="proj-subtitle">Full-stack IoT billing and management system — firmware to dashboard.</p>
-          <div className="proj-tags-row">
-            <span className="tag">ESP32</span>
-            <span className="tag">Go / Gin</span>
-            <span className="tag">React</span>
-            <span className="tag">TypeScript</span>
-            <span className="tag">PostgreSQL</span>
-            <span className="tag">PlatformIO</span>
+          <div className="proj-hero-illo">
+            <Image
+              src="/images/ozone/system-illustration.png"
+              alt="Ozone machine IoT system — ESP32 firmware to Go/Gin backend to React dashboard"
+              width={834}
+              height={299}
+              style={{ width: '100%', height: 'auto', opacity: 0.9 }}
+              priority
+            />
           </div>
         </div>
       </div>
@@ -64,7 +83,29 @@ export default function OzonePage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Managing ozone machines <em>at scale</em></h2>
-              <p className="content-text">Clients using ozone machines for sanitisation needed a way to track usage per machine, bill accurately by session, and monitor device health remotely — without any existing infrastructure to build on. The system had to work reliably in automotive workshops where network conditions are inconsistent and devices may lose power mid-session.</p>
+              <p className="content-text">Clients using ozone machines for car interior sanitisation needed a way to track usage per machine, bill accurately by session, and monitor device health remotely — without any existing infrastructure to build on. The system had to work reliably in automotive workshops where network conditions are inconsistent and devices may lose power mid-session.</p>
+            </div>
+
+            <div className="content-block">
+              <div className="sec-label">Gallery</div>
+              <h2 className="content-heading">System <em>in action</em></h2>
+              <div className="proj-gallery">
+                <OzonePhoto
+                  src="/images/ozone/hardware-board.jpg"
+                  alt="Full hardware board inside the ozone machine enclosure"
+                  caption="Hardware board"
+                />
+                <OzonePhoto
+                  src="/images/ozone/early-prototype.jpg"
+                  alt="Early ESP32 prototype on development bench"
+                  caption="Early prototype"
+                />
+                <OzonePhoto
+                  src="/images/ozone/rnd-machine.jpg"
+                  alt="R&D machine RND-02 with telematic system — BASIC / STANDARD / PREMIUM service tiers"
+                  caption="Field unit — RND-02"
+                />
+              </div>
             </div>
 
             <div className="content-block">
@@ -106,16 +147,6 @@ export default function OzonePage() {
             </div>
 
             <div className="content-block">
-              <div className="sec-label">Gallery</div>
-              <h2 className="content-heading">System <em>in action</em></h2>
-              <div className="proj-gallery">
-                <OzoneGalleryPlaceholder caption="Dashboard view" />
-                <OzoneGalleryPlaceholder caption="Device hardware" />
-                <OzoneGalleryPlaceholder caption="Client report" />
-              </div>
-            </div>
-
-            <div className="content-block">
               <div className="sec-label">Technical challenges</div>
               <h2 className="content-heading">Clock integrity on <em>embedded hardware</em></h2>
               <p className="content-text">The hardest part wasn&apos;t building the system — it was making it trustworthy. Ozone machines in workshops lose power unexpectedly. Without a reliable clock, billing timestamps become garbage.</p>
@@ -126,7 +157,7 @@ export default function OzonePage() {
             <div className="content-block">
               <div className="sec-label">Outcome</div>
               <h2 className="content-heading">In production, <em>serving real clients</em></h2>
-              <p className="content-text">The system is live and billing real clients — including staff at a major Malaysian automotive manufacturer. It runs unattended, survives power cycles, and handles intermittent connectivity without losing session data. The client dashboard is used daily to verify usage and generate monthly reports.</p>
+              <p className="content-text">The system is live and billing real clients — including automotive service centres in Malaysia, with expansion into Indonesia underway. It runs unattended, survives power cycles, and handles intermittent connectivity without losing session data. The client dashboard is used daily to verify usage and generate monthly reports.</p>
             </div>
 
           </div>
@@ -142,7 +173,7 @@ export default function OzonePage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Client type</div>
-              <div className="sidebar-val">Malaysian automotive industry</div>
+              <div className="sidebar-val">Automotive service centres · Malaysia &amp; Indonesia</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
