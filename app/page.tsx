@@ -88,11 +88,11 @@ export default function HomePage() {
               <div className="tl-item">
                 <div className="tl-year">2025 → Present</div>
                 <div>
-                  <div className="tl-role">IT Engineer — Full Stack &amp; IoT</div>
+                  <div className="tl-role">IT Engineer - Full Stack &amp; IoT</div>
                   <div className="tl-where">C Zero Sdn Bhd · Malaysian Tech Startup</div>
-                  <div className="tl-desc">Working across the full stack — building and maintaining production systems spanning web platforms, APIs, and embedded/IoT devices.</div>
+                  <div className="tl-desc">Working across the full stack - building and maintaining production systems spanning web platforms, APIs, and embedded/IoT devices.</div>
                   <div className="tl-desc">Delivered multiple end-to-end systems including internal tools, IoT-based machine platforms, and infrastructure for EV-related projects, covering frontend, backend, deployment, and system design.</div>
-                  <div className="tl-desc">Comfortable owning systems end-to-end — from architecture decisions to production deployment and iteration.</div>
+                  <div className="tl-desc">Comfortable owning systems end-to-end - from architecture decisions to production deployment and iteration.</div>
                 </div>
               </div>
               <div className="tl-item">
@@ -114,9 +114,9 @@ export default function HomePage() {
               <div className="tl-item">
                 <div className="tl-year">Side Track</div>
                 <div>
-                  <div className="tl-role">Freelance — Open to Opportunities (Part-Time)</div>
+                  <div className="tl-role">Freelance - Open to Opportunities (Part-Time)</div>
                   <div className="tl-where">Remote · MY timezone</div>
-                  <div className="tl-desc">Actively looking for my first freelance client — part-time, alongside my full-time role. Focus areas: full-stack development, IoT systems, and internal tools.</div>
+                  <div className="tl-desc">Actively looking for my first freelance client - part-time, alongside my full-time role. Focus areas: full-stack development, IoT systems, and internal tools.</div>
                 </div>
               </div>
             </div>
@@ -185,7 +185,7 @@ export default function HomePage() {
             <div className="proj-card-num">01</div>
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             <div className="proj-card-name">Ozone Machine IoT System</div>
-            <div className="proj-card-desc">Full-stack IoT system for ozone machine management — ESP32 firmware through Go backend to React dashboard, serving real automotive industry clients.</div>
+            <div className="proj-card-desc">Full-stack IoT system for ozone machine management - ESP32 firmware through Go backend to React dashboard, serving real automotive industry clients.</div>
             <div className="proj-card-tags">
               <span className="tag">ESP32</span>
               <span className="tag">Go</span>
@@ -227,7 +227,7 @@ export default function HomePage() {
             <div className="proj-card-num">04</div>
             <div className="proj-status wip"><div className="proj-status-dot"></div>Pilot phase</div>
             <div className="proj-card-name">ADAS Research System</div>
-            <div className="proj-card-desc">Advanced driver assistance system in pilot phase — embedded systems, sensor integration, and backend data pipeline.</div>
+            <div className="proj-card-desc">Advanced driver assistance system in pilot phase - embedded systems, sensor integration, and backend data pipeline.</div>
             <div className="proj-card-tags">
               <span className="tag">Rust</span>
               <span className="tag">Embedded</span>
@@ -255,7 +255,7 @@ export default function HomePage() {
           <div className="contact-left fade-up">
             <div className="sec-label">Get in touch</div>
             <h2 className="sec-heading">Let&apos;s work<br /><em>together</em></h2>
-            <p className="contact-note">I&apos;m looking for my first freelance clients — full-stack web apps, IoT systems, internal tooling. If you have something to build and want someone who can own it end-to-end, reach out.</p>
+            <p className="contact-note">I&apos;m looking for my first freelance clients - full-stack web apps, IoT systems, internal tooling. If you have something to build and want someone who can own it end-to-end, reach out.</p>
             <div className="contact-links-stack">
               <a href="mailto:amr.mzfr.dev@outlook.com" className="contact-email-link">amr.mzfr.dev@outlook.com</a>
               <a href="tel:+60129693454" className="contact-phone-link">+6012 969 3454</a>

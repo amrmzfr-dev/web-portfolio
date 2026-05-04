@@ -1235,7 +1235,7 @@ code {
 }
 
 .arch-item::before {
-  content: '—';
+  content: '-';
   color: var(--text-dim);
   flex-shrink: 0;
   font-family: var(--mono);

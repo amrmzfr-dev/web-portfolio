@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'CCTV API Server — Amir',
+  title: 'CCTV API Server - Amir',
 }
 
 export default function CCTVPage() {
@@ -16,7 +16,7 @@ export default function CCTVPage() {
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
           </div>
           <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-          <p className="proj-subtitle">Localised CCTV infrastructure API — integrated into a major Malaysian automotive brand&apos;s consumer app.</p>
+          <p className="proj-subtitle">Localised CCTV infrastructure API - integrated into a major Malaysian automotive brand&apos;s consumer app.</p>
           <div className="proj-tags-row">
             <span className="tag">Python</span>
             <span className="tag">Dahua NetSDK</span>
@@ -43,13 +43,13 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Bridging a <em>C SDK</em> to the web</h2>
-              <p className="content-text">GACE, an AC EV charger supplier, needed their Dahua camera infrastructure localised to Malaysia — accessible via a clean REST API that an external agency could integrate into a major automotive brand&apos;s consumer-facing mobile app. The Dahua NetSDK is a C library with no native HTTP interface. Someone had to build the bridge.</p>
+              <p className="content-text">GACE, an AC EV charger supplier, needed their Dahua camera infrastructure localised to Malaysia - accessible via a clean REST API that an external agency could integrate into a major automotive brand&apos;s consumer-facing mobile app. The Dahua NetSDK is a C library with no native HTTP interface. Someone had to build the bridge.</p>
             </div>
 
             <div className="content-block">
               <div className="sec-label">Architecture</div>
               <h2 className="content-heading">Python wrapping <em>native C</em></h2>
-              <p className="content-text">The core challenge was surfacing the Dahua NetSDK — a C library — as a stable, authenticated HTTP API. I wrote Python bindings over the C library, then built a clean REST layer on top using Python&apos;s WSGI stack.</p>
+              <p className="content-text">The core challenge was surfacing the Dahua NetSDK - a C library - as a stable, authenticated HTTP API. I wrote Python bindings over the C library, then built a clean REST layer on top using Python&apos;s WSGI stack.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
                   <div className="arch-layer-label">Consumer App (external agency)</div>
@@ -62,8 +62,8 @@ export default function CCTVPage() {
                 <div className="arch-layer">
                   <div className="arch-layer-label">CCTV API Server (Python)</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">REST API layer — camera endpoints, auth, routing</div>
-                    <div className="arch-item">Dual API key layers — admin keys vs client keys, stored in DB</div>
+                    <div className="arch-item">REST API layer - camera endpoints, auth, routing</div>
+                    <div className="arch-item">Dual API key layers - admin keys vs client keys, stored in DB</div>
                     <div className="arch-item">Python bindings over Dahua NetSDK C library</div>
                     <div className="arch-item">Session management and camera state tracking</div>
                   </div>
@@ -72,7 +72,7 @@ export default function CCTVPage() {
                 <div className="arch-layer">
                   <div className="arch-layer-label">Dahua / GACE Camera Hardware</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">NetSDK C library — native camera protocol</div>
+                    <div className="arch-item">NetSDK C library - native camera protocol</div>
                     <div className="arch-item">Physical CCTV infrastructure, Malaysia-hosted</div>
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">Auth design</div>
               <h2 className="content-heading">Two-layer <em>API key system</em></h2>
-              <p className="content-text">The system uses a two-tier authentication model stored in a database. Admin API keys give full access to camera management and key provisioning. Client API keys give scoped access to specific cameras and operations. Both layers are validated per-request, with keys stored securely — not hardcoded.</p>
+              <p className="content-text">The system uses a two-tier authentication model stored in a database. Admin API keys give full access to camera management and key provisioning. Client API keys give scoped access to specific cameras and operations. Both layers are validated per-request, with keys stored securely - not hardcoded.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>This design lets the external agency operate independently with their own client key, without exposing admin-level operations. Revoking access is a single database record change.</p>
             </div>
 
@@ -97,7 +97,7 @@ export default function CCTVPage() {
           <div className="proj-sidebar">
             <div className="sidebar-block">
               <div className="sidebar-label">Role</div>
-              <div className="sidebar-val">Solo engineer — API design, C bindings, auth, deployment</div>
+              <div className="sidebar-val">Solo engineer - API design, C bindings, auth, deployment</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Timeline</div>

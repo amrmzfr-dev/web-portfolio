@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'ADAS Research System — Amir',
+  title: 'ADAS Research System - Amir',
 }
 
 export default function ADASPage() {
@@ -16,7 +16,7 @@ export default function ADASPage() {
             <div className="proj-status wip"><div className="proj-status-dot"></div>Pilot phase</div>
           </div>
           <h1 className="proj-title">ADAS<br /><em>Research System</em></h1>
-          <p className="proj-subtitle">Advanced driver assistance system — embedded hardware through backend data pipeline, currently in pilot phase.</p>
+          <p className="proj-subtitle">Advanced driver assistance system - embedded hardware through backend data pipeline, currently in pilot phase.</p>
           <div className="proj-tags-row">
             <span className="tag">Rust</span>
             <span className="tag">Embedded</span>
@@ -43,7 +43,7 @@ export default function ADASPage() {
             <div className="content-block">
               <div className="sec-label">Overview</div>
               <h2 className="content-heading">Safety-critical systems <em>demand different thinking</em></h2>
-              <p className="content-text">This is an advanced driver assistance system project in active R&amp;D and pre-pilot phase with supplier confirmation. Unlike the other projects in my portfolio, this one is safety-critical by nature — the kind of system where firmware bugs have real-world consequences.</p>
+              <p className="content-text">This is an advanced driver assistance system project in active R&amp;D and pre-pilot phase with supplier confirmation. Unlike the other projects in my portfolio, this one is safety-critical by nature - the kind of system where firmware bugs have real-world consequences.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>That&apos;s precisely why I chose Rust for the embedded layer. Memory safety guarantees, no garbage collector pauses, and a type system that catches entire classes of bugs at compile time make it the right tool for this domain.</p>
 
               <div className="confidential-note">
@@ -69,7 +69,7 @@ export default function ADASPage() {
                   <div className="arch-layer-items">
                     <div className="arch-item">Real-time signal processing with hard latency constraints</div>
                     <div className="arch-item">Safety-critical logic with no dynamic allocation</div>
-                    <div className="arch-item">Deterministic error handling — no panics in production paths</div>
+                    <div className="arch-item">Deterministic error handling - no panics in production paths</div>
                   </div>
                 </div>
                 <div className="arch-arrow">↓</div>
@@ -87,8 +87,8 @@ export default function ADASPage() {
             <div className="content-block">
               <div className="sec-label">Why Rust</div>
               <h2 className="content-heading">The right tool for <em>safety-critical work</em></h2>
-              <p className="content-text">For embedded systems where a bug could affect a moving vehicle, I&apos;m not willing to trade safety for developer convenience. Rust&apos;s ownership model eliminates use-after-free, data races, and null pointer dereferences at compile time — entire categories of bugs that have caused real automotive safety incidents.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>The <code>no_std</code> embedded Rust ecosystem has matured enough to be a genuine option for this class of problem. The compile-time guarantees are worth the steeper learning curve — and I&apos;ve put in that curve.</p>
+              <p className="content-text">For embedded systems where a bug could affect a moving vehicle, I&apos;m not willing to trade safety for developer convenience. Rust&apos;s ownership model eliminates use-after-free, data races, and null pointer dereferences at compile time - entire categories of bugs that have caused real automotive safety incidents.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>The <code>no_std</code> embedded Rust ecosystem has matured enough to be a genuine option for this class of problem. The compile-time guarantees are worth the steeper learning curve - and I&apos;ve put in that curve.</p>
             </div>
 
             <div className="content-block">
@@ -102,7 +102,7 @@ export default function ADASPage() {
           <div className="proj-sidebar">
             <div className="sidebar-block">
               <div className="sidebar-label">Role</div>
-              <div className="sidebar-val">R&amp;D engineer — embedded firmware, sensor integration, backend pipeline</div>
+              <div className="sidebar-val">R&amp;D engineer - embedded firmware, sensor integration, backend pipeline</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Timeline</div>
@@ -110,7 +110,7 @@ export default function ADASPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Domain</div>
-              <div className="sidebar-val">Automotive — Advanced Driver Assistance Systems</div>
+              <div className="sidebar-val">Automotive - Advanced Driver Assistance Systems</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
