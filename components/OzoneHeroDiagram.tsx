@@ -78,7 +78,8 @@ export function OzoneHeroDiagram() {
       role="img"
       aria-label="Ozone machine ESP32 posts sessions over WiFi to a Go Gin backend and PostgreSQL, then a React TypeScript dashboard per client."
     >
-      <div className="ozone-hero-diagram__row">
+      <div className="hero-diagram-scroll">
+        <div className="ozone-hero-diagram__row">
         <div className="ozone-hero-diagram__panel ozone-hero-diagram__panel--hw">
           <div className="ozone-hero-diagram__panel-head">
             <div>
@@ -141,6 +142,7 @@ export function OzoneHeroDiagram() {
             <li>Device health and session log</li>
             <li>Admin panel (fleet)</li>
           </ul>
+        </div>
         </div>
       </div>
     </div>

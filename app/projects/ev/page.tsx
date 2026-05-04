@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { EvInstallationHeroDiagram } from '@/components/EvInstallationHeroDiagram'
 
 export const metadata: Metadata = {
   title: 'EV Charger Platform · Amir',
@@ -9,21 +10,26 @@ export default function EVPage() {
   return (
     <>
       <div className="proj-hero">
-        <div className="proj-hero-inner">
-          <Link href="/#projects" className="back-link">← Back to projects</Link>
-          <div className="proj-hero-meta">
-            <span className="proj-num-large">03</span>
-            <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
+        <div className="proj-hero-layout">
+          <div className="proj-hero-inner">
+            <Link href="/#projects" className="back-link">← Back to projects</Link>
+            <div className="proj-hero-meta">
+              <span className="proj-num-large">03</span>
+              <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
+            </div>
+            <h1 className="proj-title">EV Charger<br /><em>Installation Platform</em></h1>
+            <p className="proj-subtitle">End to end installation management system for an AC EV charger supplier, from field assignment to commissioning sign off.</p>
+            <div className="proj-tags-row">
+              <span className="tag">React</span>
+              <span className="tag">TypeScript</span>
+              <span className="tag">Go / Gin</span>
+              <span className="tag">PostgreSQL</span>
+              <span className="tag">REST API</span>
+              <span className="tag">VPS</span>
+            </div>
           </div>
-          <h1 className="proj-title">EV Charger<br /><em>Installation Platform</em></h1>
-          <p className="proj-subtitle">End to end installation management system for an AC EV charger supplier, from field assignment to commissioning sign off.</p>
-          <div className="proj-tags-row">
-            <span className="tag">React</span>
-            <span className="tag">TypeScript</span>
-            <span className="tag">Go / Gin</span>
-            <span className="tag">PostgreSQL</span>
-            <span className="tag">REST API</span>
-            <span className="tag">VPS</span>
+          <div className="proj-hero-illo">
+            <EvInstallationHeroDiagram />
           </div>
         </div>
       </div>

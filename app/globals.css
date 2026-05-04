@@ -1075,31 +1075,107 @@ footer {
   border-left: 1px solid var(--border-lt);
 }
 
-/* ── OZONE HERO DIAGRAM (CSS architecture strip) ── */
+/* ── PROJECT HERO DIAGRAM (shared strip: Ozone, CCTV, EV install, …) ── */
 .ozone-hero-diagram {
   width: 100%;
-  max-width: min(46rem, 100%);
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   font-family: var(--sans);
   opacity: 0.94;
+  container-type: inline-size;
+  container-name: hero-diagram;
 }
 
-.ozone-hero-diagram__row {
+.hero-diagram-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  display: flex;
+  justify-content: safe center;
+  padding-bottom: 0.4rem;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--orange) transparent;
+}
+
+.ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row {
   display: flex;
   align-items: stretch;
-  gap: 0.72rem;
-  width: 100%;
+  flex: 0 0 auto;
+  width: max-content;
+  max-width: none;
+  gap: clamp(0.5rem, 1.5cqi, 0.72rem);
 }
 
 .ozone-hero-diagram__panel {
-  flex: 1 1 0;
-  min-width: 0;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   border: 1px solid;
   overflow: hidden;
+}
+
+.ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__panel {
+  flex: 0 0 auto;
+  min-width: 11.75rem;
+  width: clamp(11.75rem, 20cqi, 15.5rem);
+  max-width: 15.5rem;
+}
+
+@supports not (width: 1cqi) {
+  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__panel {
+    width: clamp(11.75rem, 18vw, 15.5rem);
+  }
+}
+
+.ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__connector {
+  flex-shrink: 0;
+  width: clamp(3.15rem, 8cqi, 4.85rem);
+  min-width: 3rem;
+}
+
+@supports not (width: 1cqi) {
+  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__connector {
+    width: clamp(3.15rem, 5vw, 4.85rem);
+  }
+}
+
+.ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__panel-title {
+  font-size: clamp(0.88rem, 2.4cqi, 1.08rem);
+}
+
+.ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__panel-sub {
+  font-size: clamp(0.68rem, 1.9cqi, 0.82rem);
+}
+
+.ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__list li {
+  font-size: clamp(0.72rem, 2cqi, 0.88rem);
+  padding: clamp(0.5rem, 1.8cqi, 0.62rem) clamp(0.65rem, 2.2cqi, 0.85rem);
+}
+
+@supports not (font-size: 1cqi) {
+  .ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__panel-title {
+    font-size: clamp(0.88rem, 1.05vw, 1.08rem);
+  }
+
+  .ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__panel-sub {
+    font-size: clamp(0.68rem, 0.85vw, 0.82rem);
+  }
+
+  .ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__list li {
+    font-size: clamp(0.72rem, 0.9vw, 0.88rem);
+  }
+}
+
+.ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__go-mark,
+.ozone-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__ts-mark {
+  width: auto;
+  min-width: 1.55rem;
+  padding: 0 0.32rem;
 }
 
 .ozone-hero-diagram__panel--hw {
@@ -1273,23 +1349,32 @@ footer {
   border-left: 12px solid rgba(255, 255, 255, 0.42);
 }
 
-/* CCTV hero diagram variant */
-.cctv-hero-diagram {
-  max-width: min(60rem, 100%);
+/* CCTV: four wider columns (inherits shared hero-diagram-scroll layout) */
+.ozone-hero-diagram.cctv-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__panel {
+  min-width: 12.75rem;
+  width: clamp(12.75rem, 22cqi, 16rem);
+  max-width: 16rem;
 }
 
-.cctv-hero-diagram .ozone-hero-diagram__panel {
-  min-width: 11rem;
+@supports not (width: 1cqi) {
+  .ozone-hero-diagram.cctv-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__panel {
+    width: clamp(12.75rem, 19vw, 16rem);
+  }
 }
 
-.cctv-hero-diagram .ozone-hero-diagram__connector {
-  width: 4.1rem;
-  min-width: 3.6rem;
+.ozone-hero-diagram.cctv-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__connector {
+  width: clamp(3.15rem, 8cqi, 4rem);
 }
 
-.cctv-hero-diagram .ozone-hero-diagram__connector-top,
-.cctv-hero-diagram .ozone-hero-diagram__connector-bottom {
-  max-width: 5rem;
+@supports not (width: 1cqi) {
+  .ozone-hero-diagram.cctv-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__connector {
+    width: clamp(3.15rem, 5vw, 4rem);
+  }
+}
+
+.ozone-hero-diagram.cctv-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__connector-top,
+.ozone-hero-diagram.cctv-hero-diagram .hero-diagram-scroll .ozone-hero-diagram__connector-bottom {
+  max-width: 5.25rem;
 }
 
 .cctv-hero-diagram__panel--cam {

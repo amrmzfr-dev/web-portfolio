@@ -63,87 +63,89 @@ export function CctvHeroDiagram() {
       role="img"
       aria-label="CCTV camera registers to Python API server with three-layer auth, serving consumer app and admin panel."
     >
-      <div className="ozone-hero-diagram__row">
-        <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--cam">
-          <div className="ozone-hero-diagram__panel-head">
-            <div>
-              <div className="ozone-hero-diagram__panel-title">Camera</div>
-              <div className="ozone-hero-diagram__panel-sub">Dahua hardware</div>
+      <div className="hero-diagram-scroll">
+        <div className="ozone-hero-diagram__row">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--cam">
+            <div className="ozone-hero-diagram__panel-head">
+              <div>
+                <div className="ozone-hero-diagram__panel-title">Camera</div>
+                <div className="ozone-hero-diagram__panel-sub">Dahua hardware</div>
+              </div>
+              <div className="ozone-hero-diagram__panel-icons">
+                <IconCamera />
+                <span className="ozone-hero-diagram__chip" aria-hidden>C</span>
+              </div>
             </div>
-            <div className="ozone-hero-diagram__panel-icons">
-              <IconCamera />
-              <span className="ozone-hero-diagram__chip" aria-hidden>C</span>
-            </div>
+            <ul className="ozone-hero-diagram__list">
+              <li>NetSDK C, active registration</li>
+              <li>WiFi via Bluetooth SDK</li>
+              <li>QR credential binding</li>
+              <li>Auto reconnect state machine</li>
+            </ul>
           </div>
-          <ul className="ozone-hero-diagram__list">
-            <li>NetSDK C, active registration</li>
-            <li>WiFi via Bluetooth SDK</li>
-            <li>QR credential binding</li>
-            <li>Auto reconnect state machine</li>
-          </ul>
-        </div>
 
-        <DiagramConnector labelTop="Register" labelBottom="NAT-safe" />
+          <DiagramConnector labelTop="Register" labelBottom="NAT-safe" />
 
-        <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--api">
-          <div className="ozone-hero-diagram__panel-head">
-            <div>
-              <div className="ozone-hero-diagram__panel-title">CCTV API Server</div>
-              <div className="ozone-hero-diagram__panel-sub">Python, Flask, Gunicorn</div>
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--api">
+            <div className="ozone-hero-diagram__panel-head">
+              <div>
+                <div className="ozone-hero-diagram__panel-title">CCTV API Server</div>
+                <div className="ozone-hero-diagram__panel-sub">Python, Flask, Gunicorn</div>
+              </div>
+              <div className="ozone-hero-diagram__panel-icons">
+                <IconServer />
+                <span className="ozone-hero-diagram__go-mark" aria-hidden>PY</span>
+              </div>
             </div>
-            <div className="ozone-hero-diagram__panel-icons">
-              <IconServer />
-              <span className="ozone-hero-diagram__go-mark" aria-hidden>PY</span>
-            </div>
+            <ul className="ozone-hero-diagram__list">
+              <li>ctypes over dhnetsdk.dll</li>
+              <li>Three-layer auth chain</li>
+              <li>AES-256-GCM + lockout</li>
+              <li>MySQL, SQLAlchemy pool</li>
+            </ul>
           </div>
-          <ul className="ozone-hero-diagram__list">
-            <li>ctypes over dhnetsdk.dll</li>
-            <li>Three-layer auth chain</li>
-            <li>AES-256-GCM + lockout</li>
-            <li>MySQL, SQLAlchemy pool</li>
-          </ul>
-        </div>
 
-        <DiagramConnector labelTop="REST API" labelBottom="Keys + tokens" />
+          <DiagramConnector labelTop="REST API" labelBottom="Keys + tokens" />
 
-        <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--app">
-          <div className="ozone-hero-diagram__panel-head">
-            <div>
-              <div className="ozone-hero-diagram__panel-title">Consumer App</div>
-              <div className="ozone-hero-diagram__panel-sub">External agency</div>
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--app">
+            <div className="ozone-hero-diagram__panel-head">
+              <div>
+                <div className="ozone-hero-diagram__panel-title">Consumer App</div>
+                <div className="ozone-hero-diagram__panel-sub">External agency</div>
+              </div>
+              <div className="ozone-hero-diagram__panel-icons">
+                <IconPhone />
+                <span className="ozone-hero-diagram__ts-mark" aria-hidden>APP</span>
+              </div>
             </div>
-            <div className="ozone-hero-diagram__panel-icons">
-              <IconPhone />
-              <span className="ozone-hero-diagram__ts-mark" aria-hidden>APP</span>
-            </div>
+            <ul className="ozone-hero-diagram__list">
+              <li>Client key + stream token</li>
+              <li>Live stream and playback</li>
+              <li>Device status and controls</li>
+              <li>Token rotation</li>
+            </ul>
           </div>
-          <ul className="ozone-hero-diagram__list">
-            <li>Client key + stream token</li>
-            <li>Live stream and playback</li>
-            <li>Device status and controls</li>
-            <li>Token rotation</li>
-          </ul>
-        </div>
 
-        <DiagramConnector labelTop="Admin ops" labelBottom="" />
+          <DiagramConnector labelTop="Admin ops" labelBottom="" />
 
-        <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--admin">
-          <div className="ozone-hero-diagram__panel-head">
-            <div>
-              <div className="ozone-hero-diagram__panel-title">Admin Panel</div>
-              <div className="ozone-hero-diagram__panel-sub">GACE internal</div>
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--admin">
+            <div className="ozone-hero-diagram__panel-head">
+              <div>
+                <div className="ozone-hero-diagram__panel-title">Admin Panel</div>
+                <div className="ozone-hero-diagram__panel-sub">GACE internal</div>
+              </div>
+              <div className="ozone-hero-diagram__panel-icons">
+                <IconShield />
+                <span className="ozone-hero-diagram__chip" aria-hidden>ADM</span>
+              </div>
             </div>
-            <div className="ozone-hero-diagram__panel-icons">
-              <IconShield />
-              <span className="ozone-hero-diagram__chip" aria-hidden>ADM</span>
-            </div>
+            <ul className="ozone-hero-diagram__list">
+              <li>X-Admin-Key + bcrypt users</li>
+              <li>Fleet view and diagnostics</li>
+              <li>Reset, restart, time sync</li>
+              <li>Client key and token revoke</li>
+            </ul>
           </div>
-          <ul className="ozone-hero-diagram__list">
-            <li>X-Admin-Key + bcrypt users</li>
-            <li>Fleet view and diagnostics</li>
-            <li>Reset, restart, time sync</li>
-            <li>Client key and token revoke</li>
-          </ul>
         </div>
       </div>
     </div>
