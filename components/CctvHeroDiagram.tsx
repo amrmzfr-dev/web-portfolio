@@ -20,7 +20,7 @@ export function CctvHeroDiagram() {
     <div
       className="ozone-hero-diagram cctv-hero-diagram cctv-hero-diagram--simple"
       role="img"
-      aria-label="CCTV flow: camera to API to P Circle consumer app, with admin panel below."
+      aria-label="CCTV flow: camera to API to consumer app, with admin panel below."
     >
       <div className="hero-diagram-scroll">
         <div className="cctv-hero-diagram__grid">
@@ -59,8 +59,8 @@ export function CctvHeroDiagram() {
           <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--app cctv-hero-diagram__node--app">
             <div className="ozone-hero-diagram__panel-head">
               <div>
-                <div className="ozone-hero-diagram__panel-title">P Circle</div>
-                <div className="ozone-hero-diagram__panel-sub">PERODUA</div>
+                <div className="ozone-hero-diagram__panel-title">Consumer app</div>
+                <div className="ozone-hero-diagram__panel-sub">Agency build</div>
               </div>
             </div>
             <ul className="ozone-hero-diagram__list">

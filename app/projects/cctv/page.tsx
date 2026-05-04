@@ -19,7 +19,7 @@ export default function CCTVPage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-            <p className="proj-subtitle">REST bridge over Dahua&apos;s C NetSDK for in-charger CCTV, consumed by PERODUA&apos;s P Circle app (via an external agency).</p>
+            <p className="proj-subtitle">REST bridge over Dahua&apos;s C NetSDK for in-charger CCTV: our EV charger hardware carries the camera; a partner agency integrated this API into the OEM&apos;s consumer app.</p>
             <div className="proj-tags-row">
               <span className="tag">Python</span>
               <span className="tag">Dahua NetSDK</span>
@@ -38,7 +38,7 @@ export default function CCTVPage() {
       <div className="proj-body">
 
         <div className="proj-overview">
-          <div className="overview-stat"><div className="stat-val">Live</div><div className="stat-label">P Circle integrated</div></div>
+          <div className="overview-stat"><div className="stat-val">Live</div><div className="stat-label">Consumer app integrated</div></div>
           <div className="overview-stat"><div className="stat-val">3-layer</div><div className="stat-label">Auth system</div></div>
           <div className="overview-stat"><div className="stat-val">C SDK</div><div className="stat-label">Native bindings wrapped</div></div>
           <div className="overview-stat"><div className="stat-val">MY</div><div className="stat-label">Infrastructure localised</div></div>
@@ -50,18 +50,18 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Bridging a <em>C SDK</em> to the web</h2>
-              <p className="content-text">An AC EV charger supplier ships Dahua-based CCTV on their chargers. They needed that camera stack localised to Malaysia and reachable through a clean REST API an external agency could wire into PERODUA&apos;s P Circle consumer app (the EV unit includes this camera; this project is the CCTV side). The Dahua NetSDK is a C library with no native HTTP interface. Someone had to build the bridge.</p>
+              <p className="content-text">We ship AC EV chargers with Dahua-based CCTV on each unit. That stack had to be localised to Malaysia and exposed as a clean REST API so an external agency could integrate it into the automotive OEM&apos;s consumer app. This page focuses on our hardware and the API layer, not OEM marks or third-party app UI. The Dahua NetSDK is a C library with no native HTTP interface. Someone had to build the bridge.</p>
             </div>
 
             <div className="content-block">
-              <div className="sec-label">Consumer app</div>
-              <h2 className="content-heading">P Circle <em>(PERODUA)</em></h2>
-              <p className="content-text">Drivers use P Circle for the EV experience; the agency wired this REST API in so in-charger CCTV (live view, controls, clips) lives in the same app surface.</p>
+              <div className="sec-label">Hardware</div>
+              <h2 className="content-heading">EV charger <em>with onboard CCTV</em></h2>
+              <p className="content-text">The still below is our field unit: the charger and the integrated camera this API serves. No OEM or consumer-app branding in-frame by design.</p>
               <div className="proj-dashboard-capture">
                 <div className="photo-frame">
                   <Image
-                    src="/images/cctv/pcircle-app.png"
-                    alt="PERODUA P Circle app: in-charger CCTV experience powered by this API"
+                    src="/images/cctv/ev-charger-camera.png"
+                    alt="Company EV charger unit showing integrated CCTV hardware served by this API"
                     fill
                     style={{ objectFit: 'contain' }}
                     sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
@@ -71,7 +71,7 @@ export default function CCTVPage() {
                   <div className="photo-corner bl" />
                   <div className="photo-corner br" />
                 </div>
-                <p className="gallery-caption">P Circle: where streams, controls, and clips surface for drivers</p>
+                <p className="gallery-caption">Our charger hardware: camera lives on the unit the API talks to</p>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export default function CCTVPage() {
               <p className="content-text" style={{ marginTop: '1rem' }}>The API server runs on AWS EC2. The database is AWS RDS MySQL 8.0, reached from EC2 over a private endpoint with security group rules restricting access. Credentials and secrets load from environment variables via a systemd service and are never committed to version control.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
-                  <div className="arch-layer-label">Consumer app · P Circle (PERODUA)</div>
+                  <div className="arch-layer-label">Consumer app (agency-built for OEM)</div>
                   <div className="arch-layer-items">
                     <div className="arch-item">Delivered by an external agency; consumes this REST API</div>
                     <div className="arch-item">Client API key plus stream token authentication</div>
@@ -130,7 +130,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">Outcome</div>
               <h2 className="content-heading">In production, <em>integrated and shipping</em></h2>
-              <p className="content-text">The API server is live on AWS EC2 and integrated into the external agency&apos;s build of PERODUA&apos;s P Circle app. Camera streams, controls, and clip retrieval all flow through the API layer I built. Infrastructure work (EC2, RDS provisioning, security groups, Nginx TLS, systemd) was handled in-house alongside the application code.</p>
+              <p className="content-text">The API server is live on AWS EC2 and wired into the agency-delivered consumer app for the automotive OEM. Camera streams, controls, and clip retrieval all flow through the API layer I built. Infrastructure work (EC2, RDS provisioning, security groups, Nginx TLS, systemd) was handled in-house alongside the application code.</p>
             </div>
 
           </div>
@@ -146,7 +146,7 @@ export default function CCTVPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Client</div>
-              <div className="sidebar-val">AC EV charger supplier (hardware) · PERODUA P Circle (consumer app via agency)</div>
+              <div className="sidebar-val">Our EV charger hardware (onboard CCTV) · OEM consumer app (agency integration)</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
@@ -161,7 +161,7 @@ export default function CCTVPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Integration</div>
-              <div className="sidebar-val">External agency ships P Circle; consumes this API for in-charger CCTV features.</div>
+              <div className="sidebar-val">External agency owns the consumer app build; consumes this API for in-charger CCTV.</div>
             </div>
           </div>
         </div>
