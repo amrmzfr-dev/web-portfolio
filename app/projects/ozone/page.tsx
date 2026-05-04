@@ -55,6 +55,18 @@ export default function OzonePage() {
               <span className="tag">PostgreSQL</span>
               <span className="tag">PlatformIO</span>
             </div>
+            <p className="proj-hero-link-note">
+              Product marketing site:{' '}
+              <a
+                href="https://www.mesraekuiti.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="proj-external-link"
+              >
+                www.mesraekuiti.com
+              </a>
+              {' '}(Next.js, also by me).
+            </p>
           </div>
           <div className="proj-hero-illo">
             <OzoneHeroDiagram />
@@ -192,6 +204,20 @@ export default function OzonePage() {
             <div className="sidebar-block">
               <div className="sidebar-label">Client type</div>
               <div className="sidebar-val">Automotive service centres · Malaysia &amp; Indonesia</div>
+            </div>
+            <div className="sidebar-block">
+              <div className="sidebar-label">Product site</div>
+              <div className="sidebar-val">
+                <a
+                  href="https://www.mesraekuiti.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="proj-external-link"
+                >
+                  www.mesraekuiti.com
+                </a>
+                {' '}Promotional site for the product line, built entirely in Next.js.
+              </div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
