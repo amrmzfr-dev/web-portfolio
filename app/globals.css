@@ -1398,7 +1398,7 @@ footer {
 /* CCTV: wrapped flow [cam] > [api] > [app] then down to [admin] */
 .cctv-hero-diagram .hero-diagram-scroll {
   justify-content: stretch;
-  padding-top: clamp(0.45rem, 1.25vw, 0.85rem);
+  padding-top: clamp(0.95rem, 2.4vw, 1.6rem);
 }
 
 .cctv-hero-diagram__grid {
