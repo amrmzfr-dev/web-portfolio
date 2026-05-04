@@ -1097,10 +1097,17 @@ footer {
   padding-inline: clamp(0, 0.8cqi, 0.35rem);
 }
 
+.ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
+.cctv-hero-diagram__grid {
+  --hero-diagram-scale: clamp(0.9, calc(0.78 + 0.018vw), 1.08);
+  width: calc(100% / var(--hero-diagram-scale));
+  transform: scale(var(--hero-diagram-scale));
+  transform-origin: center top;
+}
+
 .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row {
   display: flex;
   align-items: stretch;
-  width: 100%;
   max-width: 100%;
   gap: clamp(0.2rem, calc(1.15cqi + 0.1vw), 0.9rem);
 }
