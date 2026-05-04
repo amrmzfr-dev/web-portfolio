@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Ozone Machine IoT System — Amir',
+  title: 'Ozone Machine IoT System · Amir',
 }
 
 type OzonePhotoProps = {
@@ -45,7 +45,7 @@ export default function OzonePage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">Ozone Machine<br /><em>IoT System</em></h1>
-            <p className="proj-subtitle">Retrofitting existing ozone machines with ESP32 intelligence — precise session billing, timestamped records, and live fleet visibility where there was nothing before.</p>
+            <p className="proj-subtitle">Retrofitting existing ozone machines with ESP32 intelligence: precise session billing, timestamped records, and live fleet visibility where there was nothing before.</p>
             <div className="proj-tags-row">
               <span className="tag">ESP32</span>
               <span className="tag">Go / Gin</span>
@@ -58,7 +58,7 @@ export default function OzonePage() {
           <div className="proj-hero-illo">
             <Image
               src="/images/ozone/system-illustration.png"
-              alt="Ozone machine IoT system — ESP32 firmware to Go/Gin backend to React dashboard"
+              alt="Ozone machine IoT system: ESP32 firmware, Go/Gin backend, React dashboard"
               width={834}
               height={299}
               style={{ width: '100%', height: 'auto', opacity: 0.92 }}
@@ -84,14 +84,14 @@ export default function OzonePage() {
               <div className="sec-label">Before</div>
               <h2 className="content-heading">A machine that couldn&apos;t prove <em>it worked</em></h2>
               <p className="content-text">There was already a system. The machines had a PHP-based backend that tracked session counts via an optocoupler wired to the session relay. On paper, it worked. In practice, it had two problems that made the data untrustworthy.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>The optocoupler was sensitive to electrical noise from the relay switching. A single session trigger would bounce, and the system would register it as two or three separate treatments. Billing was overcounting by design flaw. The second problem was worse: the system had no local clock. It timestamped sessions at server receive time — not at the moment of occurrence. If a machine went offline for a week and reconnected, every session from that week would land in the database with today&apos;s date. A week of real treatments collapsed into a single day&apos;s record. The data was structurally useless for any time-based reporting.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>The optocoupler was sensitive to electrical noise from the relay switching. A single session trigger would bounce, and the system would register it as two or three separate treatments. Billing was overcounting by design flaw. The second problem was worse: the system had no local clock. It timestamped sessions at server receive time, not when events actually occurred. If a machine went offline for a week and reconnected, every session from that week would land in the database with today&apos;s date. A week of real treatments collapsed into a single day&apos;s record. The data was structurally useless for any time-based reporting.</p>
             </div>
 
             <div className="content-block">
               <div className="sec-label">The intervention</div>
               <h2 className="content-heading">ESP32 as the <em>brain</em></h2>
-              <p className="content-text">I designed and built a retrofit hardware board around the ESP32-WROOM. It fits inside the same metal enclosure, connects to the same button inputs and relay chain the machine already had — but now the ESP32 intercepts every session event before the counter sees it. I added a relay control module, a voltage sensor for power state monitoring, and WiFi connectivity. Same machine exterior. Same cost to the client. But now every session generates a timestamped, structured record that travels over WiFi to a PostgreSQL database.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>The original Autonics counters still spin — they&apos;re now just displays. The system is upstream of them.</p>
+              <p className="content-text">I designed and built a retrofit hardware board around the ESP32-WROOM. It fits inside the same metal enclosure, connects to the same button inputs and relay chain the machine already had. The ESP32 now intercepts every session event before the counter sees it. I added a relay control module, a voltage sensor for power state monitoring, and WiFi connectivity. Same machine exterior. Same cost to the client. But now every session generates a timestamped, structured record that travels over WiFi to a PostgreSQL database.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>The original Autonics counters still spin. They are now just displays. The system is upstream of them.</p>
             </div>
 
             <div className="content-block">
@@ -110,8 +110,8 @@ export default function OzonePage() {
                 />
                 <OzonePhoto
                   src="/images/ozone/rnd-machine.jpg"
-                  alt="R&D machine RND-02 with telematic system — BASIC / STANDARD / PREMIUM service tiers"
-                  caption="Field unit — RND-02"
+                  alt="R&D machine RND-02 running the telematic system, BASIC STANDARD PREMIUM service tiers"
+                  caption="Field unit RND-02"
                 />
               </div>
             </div>
@@ -119,12 +119,12 @@ export default function OzonePage() {
             <div className="content-block">
               <div className="sec-label">Architecture</div>
               <h2 className="content-heading">Firmware to <em>frontend</em></h2>
-              <p className="content-text">Three independently deployable layers — ESP32 firmware intercepting machine events, a Go/Gin backend storing and analysing records, and a React dashboard giving clients visibility they never had before.</p>
+              <p className="content-text">Three independently deployable layers: ESP32 firmware intercepting machine events, a Go/Gin backend storing and analysing records, and a React dashboard giving clients visibility they never had before.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
                   <div className="arch-layer-label">Firmware (ESP32)</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">ClockSource integrity — NTP → NVS anchor fallback</div>
+                    <div className="arch-item">ClockSource integrity: NTP to NVS anchor fallback</div>
                     <div className="arch-item">Session tracking with hardware watchdog</div>
                     <div className="arch-item">Retry queue for offline resilience</div>
                     <div className="arch-item">POST payloads with clock_source field</div>
@@ -157,16 +157,15 @@ export default function OzonePage() {
             <div className="content-block">
               <div className="sec-label">Technical challenges</div>
               <h2 className="content-heading">Data integrity on <em>unreliable hardware</em></h2>
-              <p className="content-text">The core challenge wasn&apos;t keeping the hardware running — it was making every record trustworthy. Two problems had to be solved independently before the system could be considered reliable for billing.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>First: phantom counts. The optocoupler in the previous design was susceptible to electrical noise generated by the machine&apos;s own relay switching. A single physical session would bounce 2–3 times and register as multiple treatments. I addressed this at the firmware level — debounce logic and clean edge detection on the ESP32 ensure each physical session trigger maps to exactly one record, regardless of signal noise.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>Second: timestamp accuracy. The previous system timestamped sessions at server receive time. Machines in workshops lose WiFi regularly — a power cut, a router reboot, a dead spot. When connectivity restored, the server received all buffered sessions simultaneously, stamping every one with the reconnection time. A week&apos;s data would appear as a single day. I solved this by having the ESP32 timestamp each session at the moment it occurs and persist that timestamp to NVS flash before any network attempt. When the device reconnects after days offline, each session carries the time it actually happened. The <code>ClockSource</code> enum — NTP-synced, NVS-anchored, or estimated fallback — tells the backend the confidence level of each timestamp, so the analytics layer can handle edge cases explicitly rather than silently accepting bad data.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>I wrote a 37-test pre-production suite covering signal debounce, multi-pulse rejection, offline buffering, timestamp accuracy under varying clock states, and long-run consistency before going live.</p>
+              <p className="content-text">The core challenge wasn&apos;t keeping the hardware running. It was making every record trustworthy. Two problems had to be solved independently before the system could be considered reliable for billing.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>First: phantom counts. The optocoupler in the previous design was susceptible to electrical noise generated by the machine&apos;s own relay switching. A single physical session would bounce 2–3 times and register as multiple treatments. I addressed this at the firmware level with debounce logic and clean edge detection on the ESP32, ensuring each physical session trigger maps to exactly one record regardless of signal noise.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>Second: timestamp accuracy. The previous system timestamped sessions at server receive time. Machines in workshops lose WiFi regularly: a power cut, a router reboot, a dead spot. When connectivity restored, the server received all buffered sessions simultaneously, stamping every one with the reconnection time. A week&apos;s data would appear as a single day. I solved this by having the ESP32 timestamp each session at the moment it occurs and persist that timestamp to NVS flash before any network attempt. When the device reconnects after days offline, each session carries the time it actually happened. The <code>ClockSource</code> enum (NTP-synced, NVS-anchored, or estimated fallback) tells the backend the confidence level of each timestamp, so the analytics layer can handle edge cases explicitly rather than silently accepting bad data.</p>
             </div>
 
             <div className="content-block">
               <div className="sec-label">Outcome</div>
               <h2 className="content-heading">In production, <em>serving real clients</em></h2>
-              <p className="content-text">The system is live and billing real clients — including automotive service centres in Malaysia, with expansion into Indonesia underway. It runs unattended, survives power cycles, and handles intermittent connectivity without losing session data. The client dashboard is used daily to verify usage and generate monthly reports.</p>
+              <p className="content-text">The system is live and billing real clients, including automotive service centres in Malaysia, with expansion into Indonesia underway. It runs unattended, survives power cycles, and handles intermittent connectivity without losing session data. The client dashboard is used daily to verify usage and generate monthly reports.</p>
             </div>
 
           </div>
@@ -174,7 +173,7 @@ export default function OzonePage() {
           <div className="proj-sidebar">
             <div className="sidebar-block">
               <div className="sidebar-label">Role</div>
-              <div className="sidebar-val">Solo engineer — firmware, backend, frontend, deployment</div>
+              <div className="sidebar-val">Solo engineer: firmware, backend, frontend, deployment</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Timeline</div>
@@ -196,7 +195,7 @@ export default function OzonePage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Key achievement</div>
-              <div className="sidebar-val">37-test pre-production suite. Clock integrity architecture handling power-loss edge cases. Live billing replacing paper logs in production.</div>
+              <div className="sidebar-val">Clock integrity architecture with NVS-persisted timestamps. Signal debounce eliminating phantom counts. Live billing in production.</div>
             </div>
           </div>
         </div>
