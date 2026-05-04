@@ -5,6 +5,27 @@ export const metadata: Metadata = {
   title: 'Ozone Machine IoT System — Amir',
 }
 
+/** Camera stroke icon aligned with `.photo-icon svg` styling in globals.css */
+function OzoneGalleryPlaceholder({ caption }: { caption: string }) {
+  return (
+    <div className="photo-frame">
+      <div className="photo-placeholder">
+        <div className="photo-icon">
+          <svg viewBox="0 0 24 24" aria-hidden>
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+            <circle cx="12" cy="13" r="3" />
+          </svg>
+        </div>
+        <p>{caption}</p>
+      </div>
+      <div className="photo-corner tl"></div>
+      <div className="photo-corner tr"></div>
+      <div className="photo-corner bl"></div>
+      <div className="photo-corner br"></div>
+    </div>
+  )
+}
+
 export default function OzonePage() {
   return (
     <>
@@ -58,6 +79,7 @@ export default function OzonePage() {
                     <div className="arch-item">Session tracking with hardware watchdog</div>
                     <div className="arch-item">Retry queue for offline resilience</div>
                     <div className="arch-item">POST payloads with clock_source field</div>
+                    <div className="arch-item">Periodic heartbeat POST for device health tracking</div>
                   </div>
                 </div>
                 <div className="arch-arrow">↓</div>
@@ -74,12 +96,22 @@ export default function OzonePage() {
                 <div className="arch-layer">
                   <div className="arch-layer-label">Frontend (React + TypeScript)</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">Real-time dashboard per client</div>
+                    <div className="arch-item">Live dashboard per client</div>
                     <div className="arch-item">Usage billing summary views</div>
                     <div className="arch-item">Device health and session history</div>
                     <div className="arch-item">Admin panel for fleet management</div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="content-block">
+              <div className="sec-label">Gallery</div>
+              <h2 className="content-heading">System <em>in action</em></h2>
+              <div className="proj-gallery">
+                <OzoneGalleryPlaceholder caption="Dashboard view" />
+                <OzoneGalleryPlaceholder caption="Device hardware" />
+                <OzoneGalleryPlaceholder caption="Client report" />
               </div>
             </div>
 
