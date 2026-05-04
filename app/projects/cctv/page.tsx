@@ -19,7 +19,7 @@ export default function CCTVPage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-            <p className="proj-subtitle">REST bridge over Dahua&apos;s C NetSDK for in-charger CCTV: our EV charger hardware carries the camera; a partner agency integrated this API into the OEM&apos;s consumer app.</p>
+            <p className="proj-subtitle">REST bridge over Dahua&apos;s C NetSDK for in-charger CCTV: our EV charger hardware carries the camera; a partner agency integrated this API into P Circle, the OEM-linked consumer app.</p>
             <div className="proj-tags-row">
               <span className="tag">Python</span>
               <span className="tag">Dahua NetSDK</span>
@@ -38,7 +38,7 @@ export default function CCTVPage() {
       <div className="proj-body">
 
         <div className="proj-overview">
-          <div className="overview-stat"><div className="stat-val">Live</div><div className="stat-label">Consumer app integrated</div></div>
+          <div className="overview-stat"><div className="stat-val">Live</div><div className="stat-label">P Circle integration</div></div>
           <div className="overview-stat"><div className="stat-val">3-layer</div><div className="stat-label">Auth system</div></div>
           <div className="overview-stat"><div className="stat-val">C SDK</div><div className="stat-label">Native bindings wrapped</div></div>
           <div className="overview-stat"><div className="stat-val">MY</div><div className="stat-label">Infrastructure localised</div></div>
@@ -82,7 +82,7 @@ export default function CCTVPage() {
               <p className="content-text" style={{ marginTop: '1rem' }}>The API server runs on AWS EC2. The database is AWS RDS MySQL 8.0, reached from EC2 over a private endpoint with security group rules restricting access. Credentials and secrets load from environment variables via a systemd service and are never committed to version control.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
-                  <div className="arch-layer-label">Consumer app (agency-built for OEM)</div>
+                  <div className="arch-layer-label">Consumer app · P Circle (agency / OEM)</div>
                   <div className="arch-layer-items">
                     <div className="arch-item">Delivered by an external agency; consumes this REST API</div>
                     <div className="arch-item">Client API key plus stream token authentication</div>
@@ -130,7 +130,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">Outcome</div>
               <h2 className="content-heading">In production, <em>integrated and shipping</em></h2>
-              <p className="content-text">The API server is live on AWS EC2 and wired into the agency-delivered consumer app for the automotive OEM. Camera streams, controls, and clip retrieval all flow through the API layer I built. Infrastructure work (EC2, RDS provisioning, security groups, Nginx TLS, systemd) was handled in-house alongside the application code.</p>
+              <p className="content-text">The API server is live on AWS EC2 and integrated in production with P Circle, the agency-built consumer app for the automotive OEM. Camera streams, controls, and clip retrieval all flow through the API layer I built. Infrastructure work (EC2, RDS provisioning, security groups, Nginx TLS, systemd) was handled in-house alongside the application code.</p>
             </div>
 
           </div>
@@ -146,7 +146,7 @@ export default function CCTVPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Client</div>
-              <div className="sidebar-val">Our EV charger hardware (onboard CCTV) · OEM consumer app (agency integration)</div>
+              <div className="sidebar-val">Our EV charger hardware (onboard CCTV) · P Circle (agency / OEM consumer app)</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
@@ -161,7 +161,7 @@ export default function CCTVPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Integration</div>
-              <div className="sidebar-val">External agency owns the consumer app build; consumes this API for in-charger CCTV.</div>
+              <div className="sidebar-val">P Circle: agency-owned UI; this API backs in-charger CCTV features.</div>
             </div>
           </div>
         </div>
