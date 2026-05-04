@@ -1546,6 +1546,18 @@ footer {
 .cctv-hero-diagram__panel--admin .ozone-hero-diagram__panel-icons { color: rgba(240, 191, 155, 0.75); }
 .cctv-hero-diagram__panel--admin .ozone-hero-diagram__list li { border-top-color: rgba(198, 136, 96, 0.16); }
 
+.cctv-hero-diagram--simple .ozone-hero-diagram__panel-head {
+  padding-bottom: clamp(0.16rem, calc(0.8cqi + 0.05vw), 0.3rem);
+}
+
+.cctv-hero-diagram--simple .ozone-hero-diagram__list li {
+  border-top: none;
+}
+
+.cctv-hero-diagram--simple .ozone-hero-diagram__connector-bottom {
+  display: none;
+}
+
 .back-link {
   font-family: var(--mono);
   font-size: 0.65rem;
