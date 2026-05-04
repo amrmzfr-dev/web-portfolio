@@ -146,11 +146,19 @@ export default function OzonePage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="content-block">
+              <div className="sec-label">Technical challenges</div>
+              <h2 className="content-heading">Data integrity on <em>unreliable hardware</em></h2>
+              <p className="content-text">The core challenge wasn&apos;t keeping the hardware running. It was making every record trustworthy. Two problems had to be solved independently before the system could be considered reliable for billing.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>First: phantom counts. The old stack listened at an optocoupler after relay chatter. One real treatment could look like two or three pulses to software. Debouncing a passive tap could not fix the deeper problem, because the generator could already be running while firmware caught up. After the retrofit the ESP32 owns the start decision: it validates a press, commits the record, and only then energises the generator path. One intentional firmware start lines up with one physical treatment.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>Second: timestamp accuracy. The previous system timestamped sessions at server receive time. Machines in workshops lose WiFi regularly: a power cut, a router reboot, or a dead spot. When connectivity restored, the server received all buffered sessions simultaneously, stamping every one with the reconnection time. A week&apos;s data would appear as a single day. I solved this by having the ESP32 timestamp each session at the moment it occurs and persist that timestamp to NVS flash before any network attempt. When the device reconnects after days offline, each session carries the time it actually happened. The <code>ClockSource</code> enum tracks whether each record is NTP synced, NVS anchored, or an estimated fallback, and that tells the backend the confidence level of each timestamp, so the analytics layer can handle edge cases explicitly rather than silently accepting bad data.</p>
               <div className="proj-dashboard-capture">
                 <div className="photo-frame">
                   <Image
                     src="/images/ozone/ozonetrack-dashboard.png"
-                    alt="OzoneTrack outlet dashboard showing daily treatments chart and outlet metrics"
+                    alt="OzoneTrack outlet dashboard with daily treatments chart aligned to real session dates"
                     fill
                     style={{ objectFit: 'contain' }}
                     sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
@@ -160,16 +168,8 @@ export default function OzonePage() {
                   <div className="photo-corner bl" />
                   <div className="photo-corner br" />
                 </div>
-                <p className="gallery-caption">OzoneTrack client dashboard (outlet view)</p>
+                <p className="gallery-caption">Outlet reporting: daily charts reflect when sessions actually occurred, not when the server received them.</p>
               </div>
-            </div>
-
-            <div className="content-block">
-              <div className="sec-label">Technical challenges</div>
-              <h2 className="content-heading">Data integrity on <em>unreliable hardware</em></h2>
-              <p className="content-text">The core challenge wasn&apos;t keeping the hardware running. It was making every record trustworthy. Two problems had to be solved independently before the system could be considered reliable for billing.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>First: phantom counts. The old stack listened at an optocoupler after relay chatter. One real treatment could look like two or three pulses to software. Debouncing a passive tap could not fix the deeper problem, because the generator could already be running while firmware caught up. After the retrofit the ESP32 owns the start decision: it validates a press, commits the record, and only then energises the generator path. One intentional firmware start lines up with one physical treatment.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>Second: timestamp accuracy. The previous system timestamped sessions at server receive time. Machines in workshops lose WiFi regularly: a power cut, a router reboot, or a dead spot. When connectivity restored, the server received all buffered sessions simultaneously, stamping every one with the reconnection time. A week&apos;s data would appear as a single day. I solved this by having the ESP32 timestamp each session at the moment it occurs and persist that timestamp to NVS flash before any network attempt. When the device reconnects after days offline, each session carries the time it actually happened. The <code>ClockSource</code> enum tracks whether each record is NTP synced, NVS anchored, or an estimated fallback, and that tells the backend the confidence level of each timestamp, so the analytics layer can handle edge cases explicitly rather than silently accepting bad data.</p>
             </div>
 
             <div className="content-block">
