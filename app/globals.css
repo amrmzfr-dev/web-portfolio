@@ -1071,7 +1071,7 @@ footer {
   justify-content: center;
   width: 100%;
   min-width: 0;
-  padding: 3rem clamp(1rem, 2.75vw, 2.25rem) 3rem 1.5rem;
+  padding: 12px;
   border-left: 1px solid var(--border-lt);
 }
 
@@ -1094,36 +1094,13 @@ footer {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  padding-inline: clamp(0, 0.8cqi, 0.35rem);
+  padding: 12px;
 }
 
 .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
 .cctv-hero-diagram__grid {
-  --hero-diagram-scale: 0.5;
-  width: calc(100% / var(--hero-diagram-scale));
-  transform: scale(var(--hero-diagram-scale));
-  transform-origin: center top;
-}
-
-@media (min-width: 980px) {
-  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
-  .cctv-hero-diagram__grid {
-    --hero-diagram-scale: 0.56;
-  }
-}
-
-@media (min-width: 1220px) {
-  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
-  .cctv-hero-diagram__grid {
-    --hero-diagram-scale: 0.62;
-  }
-}
-
-@media (min-width: 1480px) {
-  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
-  .cctv-hero-diagram__grid {
-    --hero-diagram-scale: 0.68;
-  }
+  width: 100%;
+  transform: none;
 }
 
 .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row {
@@ -1439,12 +1416,12 @@ footer {
   display: grid;
   grid-template-columns:
     minmax(0, 1fr)
-    clamp(1.15rem, calc(4.2cqi + 0.35vw), 3.35rem)
+    clamp(1.35rem, calc(4.8cqi + 0.4vw), 3.8rem)
     minmax(0, 1fr)
-    clamp(1.15rem, calc(4.2cqi + 0.35vw), 3.35rem)
+    clamp(1.35rem, calc(4.8cqi + 0.4vw), 3.8rem)
     minmax(0, 1fr);
   grid-template-rows: auto auto auto;
-  column-gap: clamp(0.18rem, calc(1cqi + 0.08vw), 0.75rem);
+  column-gap: clamp(0.28rem, calc(1.25cqi + 0.1vw), 0.95rem);
   row-gap: clamp(0.32rem, calc(1.55cqi + 0.1vw), 0.95rem);
 }
 
