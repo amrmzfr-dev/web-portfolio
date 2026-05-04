@@ -1415,14 +1415,14 @@ footer {
   max-width: 100%;
   display: grid;
   grid-template-columns:
-    clamp(132px, 17cqi, 190px)
-    minmax(30px, 1fr)
-    clamp(132px, 17cqi, 190px)
-    minmax(30px, 1fr)
-    clamp(132px, 17cqi, 190px);
+    clamp(118px, 15.5cqi, 170px)
+    minmax(36px, 1fr)
+    clamp(118px, 15.5cqi, 170px)
+    minmax(36px, 1fr)
+    clamp(118px, 15.5cqi, 170px);
   grid-template-rows: auto auto auto;
   column-gap: clamp(0.45rem, calc(1.55cqi + 0.14vw), 1.35rem);
-  row-gap: clamp(0.32rem, calc(1.55cqi + 0.1vw), 0.95rem);
+  row-gap: clamp(0.26rem, calc(1.25cqi + 0.1vw), 0.8rem);
   align-items: start;
   justify-content: space-between;
 }
@@ -1441,6 +1441,27 @@ footer {
 .cctv-hero-diagram__grid .ozone-hero-diagram__connector-top,
 .cctv-hero-diagram__grid .ozone-hero-diagram__connector-bottom {
   font-size: clamp(0.34rem, calc(1.45cqi + 0.1vw), 0.68rem);
+}
+
+.cctv-hero-diagram__grid .ozone-hero-diagram__panel-head {
+  padding: clamp(0.28rem, calc(1.1cqi + 0.08vw), 0.5rem)
+    clamp(0.22rem, calc(1.1cqi + 0.08vw), 0.46rem)
+    clamp(0.2rem, calc(0.95cqi + 0.07vw), 0.42rem);
+}
+
+.cctv-hero-diagram__grid .ozone-hero-diagram__panel-title {
+  font-size: clamp(0.42rem, calc(1.75cqi + 0.12vw), 0.72rem);
+}
+
+.cctv-hero-diagram__grid .ozone-hero-diagram__panel-sub {
+  font-size: clamp(0.34rem, calc(1.2cqi + 0.08vw), 0.54rem);
+}
+
+.cctv-hero-diagram__grid .ozone-hero-diagram__list li {
+  font-size: clamp(0.32rem, calc(1.2cqi + 0.08vw), 0.56rem);
+  line-height: 1.28;
+  padding: clamp(0.2rem, calc(0.9cqi + 0.08vw), 0.34rem)
+    clamp(0.2rem, calc(0.95cqi + 0.08vw), 0.42rem);
 }
 
 .cctv-hero-diagram__node--cam { grid-column: 1; grid-row: 1; }
