@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { ThemeToggle } from './ThemeToggle'
 
 export function Nav() {
   return (
@@ -16,7 +15,6 @@ export function Nav() {
           <div className="avail-dot"></div>
           Seeking first freelance client
         </div>
-        <ThemeToggle />
       </div>
     </nav>
   )

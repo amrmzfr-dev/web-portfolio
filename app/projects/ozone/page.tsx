@@ -146,6 +146,22 @@ export default function OzonePage() {
                   </div>
                 </div>
               </div>
+              <div className="proj-dashboard-capture">
+                <div className="photo-frame">
+                  <Image
+                    src="/images/ozone/ozonetrack-dashboard.png"
+                    alt="OzoneTrack outlet dashboard showing daily treatments chart and outlet metrics"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
+                  />
+                  <div className="photo-corner tl" />
+                  <div className="photo-corner tr" />
+                  <div className="photo-corner bl" />
+                  <div className="photo-corner br" />
+                </div>
+                <p className="gallery-caption">OzoneTrack client dashboard (outlet view)</p>
+              </div>
             </div>
 
             <div className="content-block">
