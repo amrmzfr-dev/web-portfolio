@@ -47,7 +47,8 @@ Desktop.ini
 # Optional: uncomment if you do not want editor configs in git
 # .vscode/
 .claude
-.dual-graph
+.dual-graph\
+.context-archive
 CLAUDE.md
 CONTEXT.md
 
@@ -57,3 +58,4 @@ CONTEXT.md
 # Misc caches
 .cache/
 *.pem
+.dual-graph/
