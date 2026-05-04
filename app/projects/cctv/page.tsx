@@ -56,7 +56,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">Hardware</div>
               <h2 className="content-heading">EV charger <em>with onboard CCTV</em></h2>
-              <p className="content-text">The still below is our field unit: the charger and the integrated camera this API serves. No OEM or consumer-app branding in-frame by design.</p>
+              <p className="content-text">The still below is our field unit: the charger and the integrated camera this API serves.</p>
               <div className="proj-dashboard-capture">
                 <div className="photo-frame">
                   <Image
