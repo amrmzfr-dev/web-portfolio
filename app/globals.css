@@ -471,6 +471,9 @@ footer {
   line-height: 1.8;
   max-width: 42ch;
   margin-bottom: 2.4rem;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .hero-v2-desc strong {
@@ -1184,6 +1187,24 @@ footer {
   color: var(--text-mid);
   line-height: 1.9;
   transition: color 0.3s;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.proj-subtitle,
+.story-text,
+.story-text p,
+.tl-desc,
+.proj-card-desc,
+.contact-note,
+.sidebar-val,
+.sidebar-val-list div,
+.arch-item,
+.confidential-note p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 code {
@@ -1235,7 +1256,7 @@ code {
 }
 
 .arch-item::before {
-  content: '-';
+  content: '\2022';
   color: var(--text-dim);
   flex-shrink: 0;
   font-family: var(--mono);

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'EV Charger Platform - Amir',
+  title: 'EV Charger Platform · Amir',
 }
 
 export default function EVPage() {
@@ -16,7 +16,7 @@ export default function EVPage() {
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
           </div>
           <h1 className="proj-title">EV Charger<br /><em>Installation Platform</em></h1>
-          <p className="proj-subtitle">End-to-end installation management system for an AC EV charger supplier - from field assignment to commissioning sign-off.</p>
+          <p className="proj-subtitle">End to end installation management system for an AC EV charger supplier, from field assignment to commissioning sign off.</p>
           <div className="proj-tags-row">
             <span className="tag">React</span>
             <span className="tag">TypeScript</span>
@@ -32,7 +32,7 @@ export default function EVPage() {
 
         <div className="proj-overview">
           <div className="overview-stat"><div className="stat-val">Live</div><div className="stat-label">Active production use</div></div>
-          <div className="overview-stat"><div className="stat-val">Full</div><div className="stat-label">Workflow end-to-end</div></div>
+          <div className="overview-stat"><div className="stat-val">Full</div><div className="stat-label">Workflow end to end</div></div>
           <div className="overview-stat"><div className="stat-val">Go</div><div className="stat-label">Backend API</div></div>
           <div className="overview-stat"><div className="stat-val">React</div><div className="stat-label">Dashboard + Admin</div></div>
         </div>
@@ -43,7 +43,7 @@ export default function EVPage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Installing chargers <em>without chaos</em></h2>
-              <p className="content-text">GACE, an AC EV charger supplier, was managing installations manually - spreadsheets, WhatsApp, phone calls. As their install volume grew, tracking which installer was assigned to which site, whether site surveys had been done, and whether commissioning was completed became a real operational problem. They needed a system that gave visibility across the full installation lifecycle.</p>
+              <p className="content-text">GACE, an AC EV charger supplier, was managing installations manually: spreadsheets, WhatsApp, and phone calls. As their install volume grew, tracking which installer was assigned to which site, whether site surveys had been done, and whether commissioning was completed became a real operational problem. They needed a system that gave visibility across the full installation lifecycle.</p>
             </div>
 
             <div className="content-block">
@@ -80,7 +80,7 @@ export default function EVPage() {
                 <div className="arch-layer">
                   <div className="arch-layer-label">Admin dashboard</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">Fleet overview - all jobs, statuses, installer workload</div>
+                    <div className="arch-item">Fleet overview: all jobs, statuses, installer workload</div>
                     <div className="arch-item">Reporting and export for operations team</div>
                   </div>
                 </div>
@@ -90,8 +90,8 @@ export default function EVPage() {
             <div className="content-block">
               <div className="sec-label">Technical decisions</div>
               <h2 className="content-heading">Built to <em>scale operationally</em></h2>
-              <p className="content-text">The backend is Go with Gin - fast, statically typed, and straightforward to reason about. PostgreSQL handles the workflow state machine cleanly with enum-typed status columns and foreign key constraints enforcing valid transitions.</p>
-              <p className="content-text" style={{ marginTop: '1rem' }}>The React frontend is split into two views: an admin panel for ops team management and a field view optimised for installers on mobile. Role-based auth controls what each user can see and do. All state lives in the database - the frontend is purely display and input.</p>
+              <p className="content-text">The backend is Go with Gin: fast, statically typed, and straightforward to reason about. PostgreSQL handles the workflow state machine cleanly with enum typed status columns and foreign key constraints enforcing valid transitions.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>The React frontend is split into two views: an admin panel for ops team management and a field view optimised for installers on mobile. Role based auth controls what each user can see and do. All state lives in the database. The frontend is purely display and input.</p>
             </div>
 
             <div className="content-block">
@@ -105,7 +105,7 @@ export default function EVPage() {
           <div className="proj-sidebar">
             <div className="sidebar-block">
               <div className="sidebar-label">Role</div>
-              <div className="sidebar-val">Solo engineer - architecture, backend, frontend, deployment</div>
+              <div className="sidebar-val">Solo engineer: architecture, backend, frontend, deployment</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Timeline</div>
@@ -113,7 +113,7 @@ export default function EVPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Client</div>
-              <div className="sidebar-val">GACE - AC EV charger supplier, Malaysia</div>
+              <div className="sidebar-val">GACE, AC EV charger supplier, Malaysia</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
