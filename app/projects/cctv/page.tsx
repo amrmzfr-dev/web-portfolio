@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { CctvHeroDiagram } from '@/components/CctvHeroDiagram'
 
@@ -50,6 +51,28 @@ export default function CCTVPage() {
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Bridging a <em>C SDK</em> to the web</h2>
               <p className="content-text">An AC EV charger supplier ships Dahua-based CCTV on their chargers. They needed that camera stack localised to Malaysia and reachable through a clean REST API an external agency could wire into PERODUA&apos;s P Circle consumer app (the EV unit includes this camera; this project is the CCTV side). The Dahua NetSDK is a C library with no native HTTP interface. Someone had to build the bridge.</p>
+            </div>
+
+            <div className="content-block">
+              <div className="sec-label">Consumer app</div>
+              <h2 className="content-heading">P Circle <em>(PERODUA)</em></h2>
+              <p className="content-text">Drivers use P Circle for the EV experience; the agency wired this REST API in so in-charger CCTV (live view, controls, clips) lives in the same app surface.</p>
+              <div className="proj-dashboard-capture">
+                <div className="photo-frame">
+                  <Image
+                    src="/images/cctv/pcircle-app.png"
+                    alt="PERODUA P Circle app: in-charger CCTV experience powered by this API"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
+                  />
+                  <div className="photo-corner tl" />
+                  <div className="photo-corner tr" />
+                  <div className="photo-corner bl" />
+                  <div className="photo-corner br" />
+                </div>
+                <p className="gallery-caption">P Circle: where streams, controls, and clips surface for drivers</p>
+              </div>
             </div>
 
             <div className="content-block">
