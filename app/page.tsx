@@ -199,7 +199,7 @@ export default function HomePage() {
             <div className="proj-card-num">02</div>
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             <div className="proj-card-name">CCTV API Server</div>
-            <div className="proj-card-desc">Python API server wrapping the Dahua NetSDK C library. Integrated into a major Malaysian automotive brand&apos;s consumer mobile app.</div>
+            <div className="proj-card-desc">Python REST API over Dahua&apos;s C NetSDK for in-charger CCTV. Consumed by PERODUA&apos;s P Circle app via an external agency.</div>
             <div className="proj-card-tags">
               <span className="tag">Python</span>
               <span className="tag">NetSDK</span>
