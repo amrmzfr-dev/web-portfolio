@@ -64,8 +64,8 @@ export function CctvHeroDiagram() {
       aria-label="CCTV camera registers to Python API server with three-layer auth, serving consumer app and admin panel."
     >
       <div className="hero-diagram-scroll">
-        <div className="ozone-hero-diagram__row">
-          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--cam">
+        <div className="cctv-hero-diagram__grid">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--cam cctv-hero-diagram__node--cam">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Camera</div>
@@ -84,9 +84,11 @@ export function CctvHeroDiagram() {
             </ul>
           </div>
 
-          <DiagramConnector labelTop="Register" labelBottom="NAT-safe" />
+          <div className="cctv-hero-diagram__node--c1">
+            <DiagramConnector labelTop="Register" labelBottom="NAT-safe" />
+          </div>
 
-          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--api">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--api cctv-hero-diagram__node--api">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">CCTV API Server</div>
@@ -105,9 +107,11 @@ export function CctvHeroDiagram() {
             </ul>
           </div>
 
-          <DiagramConnector labelTop="REST API" labelBottom="Keys + tokens" />
+          <div className="cctv-hero-diagram__node--c2">
+            <DiagramConnector labelTop="REST API" labelBottom="Keys + tokens" />
+          </div>
 
-          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--app">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--app cctv-hero-diagram__node--app">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Consumer App</div>
@@ -126,9 +130,12 @@ export function CctvHeroDiagram() {
             </ul>
           </div>
 
-          <DiagramConnector labelTop="Admin ops" labelBottom="" />
+          <div className="cctv-hero-diagram__node--drop">
+            <span className="ozone-hero-diagram__connector-top">Admin ops</span>
+            <div className="cctv-hero-diagram__arrow-down" aria-hidden />
+          </div>
 
-          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--admin">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--admin cctv-hero-diagram__node--admin">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Admin Panel</div>
