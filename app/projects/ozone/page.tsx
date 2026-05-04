@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { OzoneHeroDiagram } from '@/components/OzoneHeroDiagram'
 
 export const metadata: Metadata = {
   title: 'Ozone Machine IoT System · Amir',
@@ -56,14 +57,7 @@ export default function OzonePage() {
             </div>
           </div>
           <div className="proj-hero-illo">
-            <Image
-              src="/images/ozone/system-illustration.png"
-              alt="Ozone machine IoT system: ESP32 firmware, Go/Gin backend, React dashboard"
-              width={834}
-              height={299}
-              style={{ width: '100%', height: 'auto', opacity: 0.92 }}
-              priority
-            />
+            <OzoneHeroDiagram />
           </div>
         </div>
       </div>
