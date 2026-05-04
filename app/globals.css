@@ -1415,17 +1415,20 @@ footer {
   max-width: 100%;
   display: grid;
   grid-template-columns:
-    minmax(0, 1fr)
-    clamp(1.35rem, calc(4.8cqi + 0.4vw), 3.8rem)
-    minmax(0, 1fr)
-    clamp(1.35rem, calc(4.8cqi + 0.4vw), 3.8rem)
-    minmax(0, 1fr);
+    clamp(132px, 17cqi, 190px)
+    minmax(30px, 1fr)
+    clamp(132px, 17cqi, 190px)
+    minmax(30px, 1fr)
+    clamp(132px, 17cqi, 190px);
   grid-template-rows: auto auto auto;
-  column-gap: clamp(0.28rem, calc(1.25cqi + 0.1vw), 0.95rem);
+  column-gap: clamp(0.45rem, calc(1.55cqi + 0.14vw), 1.35rem);
   row-gap: clamp(0.32rem, calc(1.55cqi + 0.1vw), 0.95rem);
+  align-items: start;
+  justify-content: space-between;
 }
 
 .cctv-hero-diagram__grid .ozone-hero-diagram__panel {
+  width: 100%;
   min-width: 0;
 }
 
