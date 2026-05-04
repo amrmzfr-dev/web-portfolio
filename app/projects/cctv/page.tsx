@@ -19,7 +19,7 @@ export default function CCTVPage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-            <p className="proj-subtitle">REST bridge over Dahua&apos;s C NetSDK for in-charger CCTV: our EV charger hardware carries the camera; a partner agency integrated this API into P Circle, the OEM-linked consumer app.</p>
+            <p className="proj-subtitle">On the Perodua Q VE EV charger programme I spent most of my time on support-level integration: local work to land outside-supplier technology. In-charger CCTV was the exception—I owned this stack end to end: a REST bridge over Dahua&apos;s C NetSDK on our hardware, integrated into P Circle by the agency.</p>
             <div className="proj-tags-row">
               <span className="tag">Python</span>
               <span className="tag">Dahua NetSDK</span>
@@ -50,7 +50,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Bridging a <em>C SDK</em> to the web</h2>
-              <p className="content-text">We ship AC EV chargers with Dahua-based CCTV on each unit. That stack had to be localised to Malaysia and exposed as a clean REST API so an external agency could integrate it into the automotive OEM&apos;s consumer app. This page focuses on our hardware and the API layer, not OEM marks or third-party app UI. The Dahua NetSDK is a C library with no native HTTP interface. Someone had to build the bridge.</p>
+              <p className="content-text">The same EV chargers power the Perodua Q VE line: Dahua-based CCTV on each unit. Across that programme my role was mostly integration support—helping supplier-delivered systems work in Malaysia—while the CCTV API server was where I got a full build slot: localising the camera stack, wrapping the Dahua NetSDK (a C library with no native HTTP interface) behind a clean REST API, and handing it off so an external agency could wire it into P Circle.</p>
             </div>
 
             <div className="content-block">
@@ -138,7 +138,7 @@ export default function CCTVPage() {
           <div className="proj-sidebar">
             <div className="sidebar-block">
               <div className="sidebar-label">Role</div>
-              <div className="sidebar-val">Solo engineer: API design, C bindings, auth, deployment</div>
+              <div className="sidebar-val">CCTV: solo delivery (API design, C bindings, auth, deployment). Perodua Q VE wider programme: mainly support-level integration on supplier technology locally.</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Timeline</div>
@@ -146,7 +146,7 @@ export default function CCTVPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Client</div>
-              <div className="sidebar-val">Our EV charger hardware (onboard CCTV) · P Circle (agency / OEM consumer app)</div>
+              <div className="sidebar-val">Perodua Q VE EV chargers (our hardware, onboard CCTV) · P Circle (agency / OEM consumer app)</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
