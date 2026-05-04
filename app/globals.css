@@ -1099,10 +1099,31 @@ footer {
 
 .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
 .cctv-hero-diagram__grid {
-  --hero-diagram-scale: clamp(0.9, calc(0.78 + 0.018vw), 1.08);
+  --hero-diagram-scale: 0.94;
   width: calc(100% / var(--hero-diagram-scale));
   transform: scale(var(--hero-diagram-scale));
   transform-origin: center top;
+}
+
+@media (min-width: 980px) {
+  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
+  .cctv-hero-diagram__grid {
+    --hero-diagram-scale: 1;
+  }
+}
+
+@media (min-width: 1220px) {
+  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
+  .cctv-hero-diagram__grid {
+    --hero-diagram-scale: 1.06;
+  }
+}
+
+@media (min-width: 1480px) {
+  .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row,
+  .cctv-hero-diagram__grid {
+    --hero-diagram-scale: 1.12;
+  }
 }
 
 .ozone-hero-diagram .hero-diagram-scroll > .ozone-hero-diagram__row {
