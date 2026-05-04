@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { CctvHeroDiagram } from '@/components/CctvHeroDiagram'
 
 export const metadata: Metadata = {
   title: 'CCTV API Server · Amir',
@@ -9,21 +10,26 @@ export default function CCTVPage() {
   return (
     <>
       <div className="proj-hero">
-        <div className="proj-hero-inner">
-          <Link href="/#projects" className="back-link">← Back to projects</Link>
-          <div className="proj-hero-meta">
-            <span className="proj-num-large">02</span>
-            <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
+        <div className="proj-hero-layout">
+          <div className="proj-hero-inner">
+            <Link href="/#projects" className="back-link">← Back to projects</Link>
+            <div className="proj-hero-meta">
+              <span className="proj-num-large">02</span>
+              <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
+            </div>
+            <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
+            <p className="proj-subtitle">Localised CCTV infrastructure API, integrated into a major Malaysian automotive brand&apos;s consumer app.</p>
+            <div className="proj-tags-row">
+              <span className="tag">Python</span>
+              <span className="tag">Dahua NetSDK</span>
+              <span className="tag">C Bindings</span>
+              <span className="tag">REST</span>
+              <span className="tag">Multi-tenant Auth</span>
+              <span className="tag">VPS</span>
+            </div>
           </div>
-          <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-          <p className="proj-subtitle">Localised CCTV infrastructure API, integrated into a major Malaysian automotive brand&apos;s consumer app.</p>
-          <div className="proj-tags-row">
-            <span className="tag">Python</span>
-            <span className="tag">Dahua NetSDK</span>
-            <span className="tag">C Bindings</span>
-            <span className="tag">REST</span>
-            <span className="tag">Multi-tenant Auth</span>
-            <span className="tag">VPS</span>
+          <div className="proj-hero-illo">
+            <CctvHeroDiagram />
           </div>
         </div>
       </div>

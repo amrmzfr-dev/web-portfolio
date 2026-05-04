@@ -1273,6 +1273,81 @@ footer {
   border-left: 12px solid rgba(255, 255, 255, 0.42);
 }
 
+/* CCTV hero diagram variant */
+.cctv-hero-diagram {
+  max-width: min(60rem, 100%);
+}
+
+.cctv-hero-diagram .ozone-hero-diagram__panel {
+  min-width: 11rem;
+}
+
+.cctv-hero-diagram .ozone-hero-diagram__connector {
+  width: 4.1rem;
+  min-width: 3.6rem;
+}
+
+.cctv-hero-diagram .ozone-hero-diagram__connector-top,
+.cctv-hero-diagram .ozone-hero-diagram__connector-bottom {
+  max-width: 5rem;
+}
+
+.cctv-hero-diagram__panel--cam {
+  background: rgba(42, 87, 126, 0.22);
+  border-color: rgba(100, 153, 196, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.cctv-hero-diagram__panel--cam .ozone-hero-diagram__panel-head {
+  border-bottom: 1px solid rgba(100, 153, 196, 0.28);
+}
+
+.cctv-hero-diagram__panel--cam .ozone-hero-diagram__panel-title { color: #9ec6e8; }
+.cctv-hero-diagram__panel--cam .ozone-hero-diagram__panel-icons { color: rgba(158, 198, 232, 0.75); }
+.cctv-hero-diagram__panel--cam .ozone-hero-diagram__list li { border-top-color: rgba(100, 153, 196, 0.16); }
+
+.cctv-hero-diagram__panel--api {
+  background: rgba(70, 74, 126, 0.22);
+  border-color: rgba(126, 132, 196, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.cctv-hero-diagram__panel--api .ozone-hero-diagram__panel-head {
+  border-bottom: 1px solid rgba(126, 132, 196, 0.28);
+}
+
+.cctv-hero-diagram__panel--api .ozone-hero-diagram__panel-title { color: #b4b9ef; }
+.cctv-hero-diagram__panel--api .ozone-hero-diagram__panel-icons { color: rgba(180, 185, 239, 0.75); }
+.cctv-hero-diagram__panel--api .ozone-hero-diagram__list li { border-top-color: rgba(126, 132, 196, 0.16); }
+
+.cctv-hero-diagram__panel--app {
+  background: rgba(40, 110, 100, 0.22);
+  border-color: rgba(90, 176, 161, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.cctv-hero-diagram__panel--app .ozone-hero-diagram__panel-head {
+  border-bottom: 1px solid rgba(90, 176, 161, 0.28);
+}
+
+.cctv-hero-diagram__panel--app .ozone-hero-diagram__panel-title { color: #9fd9cd; }
+.cctv-hero-diagram__panel--app .ozone-hero-diagram__panel-icons { color: rgba(159, 217, 205, 0.75); }
+.cctv-hero-diagram__panel--app .ozone-hero-diagram__list li { border-top-color: rgba(90, 176, 161, 0.16); }
+
+.cctv-hero-diagram__panel--admin {
+  background: rgba(120, 76, 52, 0.22);
+  border-color: rgba(198, 136, 96, 0.42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.cctv-hero-diagram__panel--admin .ozone-hero-diagram__panel-head {
+  border-bottom: 1px solid rgba(198, 136, 96, 0.28);
+}
+
+.cctv-hero-diagram__panel--admin .ozone-hero-diagram__panel-title { color: #f0bf9b; }
+.cctv-hero-diagram__panel--admin .ozone-hero-diagram__panel-icons { color: rgba(240, 191, 155, 0.75); }
+.cctv-hero-diagram__panel--admin .ozone-hero-diagram__list li { border-top-color: rgba(198, 136, 96, 0.16); }
+
 .back-link {
   font-family: var(--mono);
   font-size: 0.65rem;
