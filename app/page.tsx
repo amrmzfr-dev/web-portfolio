@@ -213,7 +213,7 @@ export default function HomePage() {
             <div className="proj-card-num">03</div>
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             <div className="proj-card-name">EV Charger Installation Platform</div>
-            <div className="proj-card-desc">End to end installation management system for an AC EV charger supplier. Tracks installers, site surveys, and commissioning workflows.</div>
+            <div className="proj-card-desc">End to end installation management system for internal operations at C Zero Sdn Bhd. Tracks installers, site surveys, and commissioning workflows.</div>
             <div className="proj-card-tags">
               <span className="tag">React</span>
               <span className="tag">TypeScript</span>

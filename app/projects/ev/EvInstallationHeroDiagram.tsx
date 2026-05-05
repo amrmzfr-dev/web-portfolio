@@ -112,7 +112,7 @@ export function EvInstallationHeroDiagram() {
               <li>Fleet view of all install jobs</li>
               <li>Installer workload and status</li>
               <li>Reporting and CSV export</li>
-              <li>Single source of truth for GACE</li>
+              <li>Single source of truth for internal operations</li>
             </ul>
           </div>
         </div>

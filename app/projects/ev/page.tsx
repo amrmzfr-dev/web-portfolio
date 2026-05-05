@@ -19,7 +19,7 @@ export default function EVPage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">EV Charger<br /><em>Installation Platform</em></h1>
-            <p className="proj-subtitle">End to end installation management system for an AC EV charger supplier, from field assignment to commissioning sign off.</p>
+            <p className="proj-subtitle">End to end installation management system for C Zero Sdn Bhd, from field assignment to commissioning sign off.</p>
             <div className="proj-tags-row">
               <span className="tag">React</span>
               <span className="tag">TypeScript</span>
@@ -52,7 +52,7 @@ export default function EVPage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Installing chargers <em>without chaos</em></h2>
-              <p className="content-text">GACE, an AC EV charger supplier, was managing installations manually: spreadsheets, WhatsApp, and phone calls. As their install volume grew, tracking which installer was assigned to which site, whether site surveys had been done, and whether commissioning was completed became a real operational problem. They needed a system that gave visibility across the full installation lifecycle.</p>
+              <p className="content-text">At C Zero Sdn Bhd, installations were managed manually through spreadsheets, WhatsApp, and phone calls. As volume grew across hundreds of outsourced installers registered under us, tracking assignment, site survey completion, and commissioning status became a real operational problem. We needed a system that gave clear visibility across the full installation lifecycle.</p>
             </div>
 
             <div className="content-block">
@@ -139,7 +139,7 @@ export default function EVPage() {
             <div className="content-block">
               <div className="sec-label">Outcome</div>
               <h2 className="content-heading">Replaced spreadsheets, <em>now fully in use</em></h2>
-              <p className="content-text">The system replaced the previous WhatsApp and spreadsheet workflow entirely. GACE&apos;s operations team now has a single source of truth for every installation job. The platform has been in active production use since deployment with no major incidents.</p>
+              <p className="content-text">The system replaced the previous WhatsApp and spreadsheet workflow entirely. Our operations team now has a single source of truth for every installation job, including field progress by outsourced installers. The platform has been in active production use since deployment with no major incidents.</p>
             </div>
 
           </div>
@@ -154,8 +154,8 @@ export default function EVPage() {
               <div className="sidebar-val">2025 · Production</div>
             </div>
             <div className="sidebar-block">
-              <div className="sidebar-label">Client</div>
-              <div className="sidebar-val">GACE, AC EV charger supplier, Malaysia</div>
+              <div className="sidebar-label">Organisation</div>
+              <div className="sidebar-val">C Zero Sdn Bhd, internal operations platform, Malaysia</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Stack</div>
