@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { EvInstallationHeroDiagram } from './EvInstallationHeroDiagram'
 
@@ -24,6 +25,8 @@ export default function EVPage() {
               <span className="tag">TypeScript</span>
               <span className="tag">Go / Gin</span>
               <span className="tag">PostgreSQL</span>
+              <span className="tag">Redis</span>
+              <span className="tag">Cloudflare R2</span>
               <span className="tag">REST API</span>
               <span className="tag">VPS</span>
             </div>
@@ -91,12 +94,45 @@ export default function EVPage() {
                   </div>
                 </div>
               </div>
+              <div className="proj-dashboard-capture">
+                <div className="photo-frame">
+                  <Image
+                    src="/images/ev/dashboard.png"
+                    alt="EV installation platform admin dashboard showing jobs, completion rate, and live activity"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
+                  />
+                  <div className="photo-corner tl" />
+                  <div className="photo-corner tr" />
+                  <div className="photo-corner bl" />
+                  <div className="photo-corner br" />
+                </div>
+                <p className="gallery-caption">Admin dashboard: job overview, monthly performance, and live activity feed</p>
+              </div>
+              <div className="proj-dashboard-capture" style={{ marginTop: '1.5rem' }}>
+                <div className="photo-frame">
+                  <Image
+                    src="/images/ev/new-installation.png"
+                    alt="Create new installation form with map, customer details, and recommended installers"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
+                  />
+                  <div className="photo-corner tl" />
+                  <div className="photo-corner tr" />
+                  <div className="photo-corner bl" />
+                  <div className="photo-corner br" />
+                </div>
+                <p className="gallery-caption">New installation form: site map, customer details, and installer recommendation</p>
+              </div>
             </div>
 
             <div className="content-block">
               <div className="sec-label">Technical decisions</div>
               <h2 className="content-heading">Built to <em>scale operationally</em></h2>
-              <p className="content-text">The backend is Go with Gin: fast, statically typed, and straightforward to reason about. PostgreSQL handles the workflow state machine cleanly with enum typed status columns and foreign key constraints enforcing valid transitions.</p>
+              <p className="content-text">The backend is Go with Gin: fast, statically typed, and straightforward to reason about. PostgreSQL handles the workflow state machine cleanly with enum typed status columns and foreign key constraints enforcing valid transitions. Redis handles session caching and rate limiting at the API layer.</p>
+              <p className="content-text" style={{ marginTop: '1rem' }}>Survey photos and commissioning documents are stored in Cloudflare R2, served via a public custom domain URL. Using R2 over a traditional object store keeps egress costs at zero while giving the ops team direct access to files without hitting the API.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>The React frontend is split into two views: an admin panel for ops team management and a field view optimised for installers on mobile. Role based auth controls what each user can see and do. All state lives in the database. The frontend is purely display and input.</p>
             </div>
 
@@ -127,6 +163,8 @@ export default function EVPage() {
                 <div>React + TypeScript</div>
                 <div>Go / Gin</div>
                 <div>PostgreSQL</div>
+                <div>Redis</div>
+                <div>Cloudflare R2</div>
                 <div>REST API</div>
                 <div>VPS · AlmaLinux</div>
               </div>
