@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { EvInstallationHeroDiagram } from '@/components/EvInstallationHeroDiagram'
+import { EvInstallationHeroDiagram } from './EvInstallationHeroDiagram'
 
 export const metadata: Metadata = {
   title: 'EV Charger Platform · Amir',
@@ -55,7 +55,7 @@ export default function EVPage() {
             <div className="content-block">
               <div className="sec-label">What I built</div>
               <h2 className="content-heading">A complete <em>operations platform</em></h2>
-              <p className="content-text">The platform covers the full installation workflow from initial customer request through to final commissioning sign-off. Every stage is tracked, timestamped, and assigned to a responsible party.</p>
+              <p className="content-text">The platform covers the full installation workflow from initial customer request through to final commissioning sign off. Every stage is tracked, timestamped, and assigned to a responsible party.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
                   <div className="arch-layer-label">Customer request intake</div>
@@ -78,7 +78,7 @@ export default function EVPage() {
                   <div className="arch-layer-label">Installation and commissioning</div>
                   <div className="arch-layer-items">
                     <div className="arch-item">Field installer progress tracking</div>
-                    <div className="arch-item">Commissioning checklist and sign-off</div>
+                    <div className="arch-item">Commissioning checklist and sign off</div>
                     <div className="arch-item">Final documentation generation</div>
                   </div>
                 </div>

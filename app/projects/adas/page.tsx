@@ -32,7 +32,7 @@ export default function ADASPage() {
 
         <div className="proj-overview">
           <div className="overview-stat"><div className="stat-val">R&amp;D</div><div className="stat-label">Active research phase</div></div>
-          <div className="overview-stat"><div className="stat-val">Rust</div><div className="stat-label">Safety-critical firmware</div></div>
+          <div className="overview-stat"><div className="stat-val">Rust</div><div className="stat-label">Safety critical firmware</div></div>
           <div className="overview-stat"><div className="stat-val">Pilot</div><div className="stat-label">Pilot phase</div></div>
           <div className="overview-stat"><div className="stat-val">ADAS</div><div className="stat-label">Automotive domain</div></div>
         </div>
@@ -42,7 +42,7 @@ export default function ADASPage() {
 
             <div className="content-block">
               <div className="sec-label">Overview</div>
-              <h2 className="content-heading">Safety-critical systems <em>demand different thinking</em></h2>
+              <h2 className="content-heading">Safety critical systems <em>demand different thinking</em></h2>
               <p className="content-text">This is an advanced driver assistance system project in active R&amp;D and pre pilot phase with supplier confirmation. Unlike the other projects in my portfolio, this one is safety critical by nature, the kind of system where firmware bugs have real world consequences.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>That&apos;s precisely why I chose Rust for the embedded layer. Memory safety guarantees, no garbage collector pauses, and a type system that catches entire classes of bugs at compile time make it the right tool for this domain.</p>
 
@@ -67,8 +67,8 @@ export default function ADASPage() {
                 <div className="arch-layer">
                   <div className="arch-layer-label">Embedded processing (Rust)</div>
                   <div className="arch-layer-items">
-                    <div className="arch-item">Real-time signal processing with hard latency constraints</div>
-                    <div className="arch-item">Safety-critical logic with no dynamic allocation</div>
+                    <div className="arch-item">Real time signal processing with hard latency constraints</div>
+                    <div className="arch-item">Safety critical logic with no dynamic allocation</div>
                     <div className="arch-item">Deterministic error handling: no panics in production paths</div>
                   </div>
                 </div>
@@ -86,7 +86,7 @@ export default function ADASPage() {
 
             <div className="content-block">
               <div className="sec-label">Why Rust</div>
-              <h2 className="content-heading">The right tool for <em>safety-critical work</em></h2>
+              <h2 className="content-heading">The right tool for <em>safety critical work</em></h2>
               <p className="content-text">For embedded systems where a bug could affect a moving vehicle, I&apos;m not willing to trade safety for developer convenience. Rust&apos;s ownership model eliminates use after free, data races, and null pointer dereferences at compile time, which removes entire categories of bugs that have caused real automotive safety incidents.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>The <code>no_std</code> embedded Rust ecosystem has matured enough to be a genuine option for this class of problem. The compile time guarantees are worth the steeper learning curve, and I&apos;ve put in that curve.</p>
             </div>
@@ -123,7 +123,7 @@ export default function ADASPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Why it matters</div>
-              <div className="sidebar-val">Safety-critical embedded systems where software correctness is non-negotiable. Rust chosen specifically for compile-time safety guarantees.</div>
+              <div className="sidebar-val">Safety critical embedded systems where software correctness is not negotiable. Rust chosen specifically for compile time safety guarantees.</div>
             </div>
           </div>
         </div>

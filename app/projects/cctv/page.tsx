@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { CctvHeroDiagram } from '@/components/CctvHeroDiagram'
+import { CctvHeroDiagram } from './CctvHeroDiagram'
 
 export const metadata: Metadata = {
   title: 'CCTV API Server · Amir',
@@ -19,13 +19,13 @@ export default function CCTVPage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-            <p className="proj-subtitle">On the Perodua Q VE EV charger programme I spent most of my time on support-level integration: local work to land outside-supplier technology. In-charger CCTV was the exception—I owned this stack end to end: a REST bridge over Dahua&apos;s C NetSDK on our hardware, integrated into P Circle by the agency.</p>
+            <p className="proj-subtitle">On the Perodua Q VE EV charger programme I spent most of my time on support level integration: local work to land technology from outside suppliers. The exception was CCTV in the charger. I owned this stack end to end: a REST bridge over Dahua&apos;s C NetSDK on our hardware, integrated into P Circle by the agency.</p>
             <div className="proj-tags-row">
               <span className="tag">Python</span>
               <span className="tag">Dahua NetSDK</span>
               <span className="tag">C Bindings</span>
               <span className="tag">REST</span>
-              <span className="tag">Multi-tenant Auth</span>
+              <span className="tag">Multi tenant Auth</span>
               <span className="tag">AWS</span>
             </div>
           </div>
@@ -39,7 +39,7 @@ export default function CCTVPage() {
 
         <div className="proj-overview">
           <div className="overview-stat"><div className="stat-val">Live</div><div className="stat-label">P Circle integration</div></div>
-          <div className="overview-stat"><div className="stat-val">3-layer</div><div className="stat-label">Auth system</div></div>
+          <div className="overview-stat"><div className="stat-val">Three layer</div><div className="stat-label">Auth system</div></div>
           <div className="overview-stat"><div className="stat-val">C SDK</div><div className="stat-label">Native bindings wrapped</div></div>
           <div className="overview-stat"><div className="stat-val">MY</div><div className="stat-label">Infrastructure localised</div></div>
         </div>
@@ -50,7 +50,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Bridging a <em>C SDK</em> to the web</h2>
-              <p className="content-text">The same EV chargers power the Perodua Q VE line: Dahua-based CCTV on each unit. Across that programme my role was mostly integration support—helping supplier-delivered systems work in Malaysia—while the CCTV API server was where I got a full build slot: localising the camera stack, wrapping the Dahua NetSDK (a C library with no native HTTP interface) behind a clean REST API, and handing it off so an external agency could wire it into P Circle.</p>
+              <p className="content-text">The same EV chargers power the Perodua Q VE line: CCTV using Dahua on each unit. Across that programme my role was mostly integration support, helping supplier delivered systems work in Malaysia, while the CCTV API server was where I got a full build slot: localising the camera stack, wrapping the Dahua NetSDK (a C library with no native HTTP interface) behind a clean REST API, and handing it off so an external agency could wire it into P Circle.</p>
             </div>
 
             <div className="content-block">
@@ -94,10 +94,10 @@ export default function CCTVPage() {
                   <div className="arch-layer-label">CCTV API server · AWS EC2</div>
                   <div className="arch-layer-items">
                     <div className="arch-item">Nginx (TLS) → Gunicorn → Flask</div>
-                    <div className="arch-item">Three-layer auth: admin key (env), client API keys (RDS), stream tokens (RDS, per user × device)</div>
+                    <div className="arch-item">Three layer auth: admin key (env), client API keys (RDS), stream tokens (RDS, per user × device)</div>
                     <div className="arch-item">NetSDK Python package: ctypes bindings over Dahua&apos;s C DLL</div>
                     <div className="arch-item">Listen Server mode: cameras register inbound; no inbound firewall rules on the camera</div>
-                    <div className="arch-item">Camera state machine, auto-reconnect, credential retry</div>
+                    <div className="arch-item">Camera state machine, automatic reconnect, credential retry</div>
                   </div>
                 </div>
                 <div className="arch-arrow">↓</div>
@@ -110,11 +110,11 @@ export default function CCTVPage() {
                 </div>
                 <div className="arch-arrow">↓</div>
                 <div className="arch-layer">
-                  <div className="arch-layer-label">Dahua camera hardware (on-charger CCTV)</div>
+                  <div className="arch-layer-label">Dahua camera hardware (CCTV on the charger)</div>
                   <div className="arch-layer-items">
                     <div className="arch-item">Active registration: camera initiates connection to the EC2 server</div>
                     <div className="arch-item">WiFi provisioned via Bluetooth SDK; credentials bound via QR scan</div>
-                    <div className="arch-item">Malaysia-hosted field units</div>
+                    <div className="arch-item">Malaysia hosted field units</div>
                   </div>
                 </div>
               </div>
@@ -122,15 +122,15 @@ export default function CCTVPage() {
 
             <div className="content-block">
               <div className="sec-label">Auth design</div>
-              <h2 className="content-heading">Three-layer <em>auth system</em></h2>
-              <p className="content-text">The auth model has three layers, each scoped differently. The admin key (X-Admin-Key header) is a single secret stored as an environment variable with IP-based brute-force lockout: five failed attempts triggers a fifteen-minute block. Client API keys (X-Client-Key header) live in RDS and authenticate the external agency globally, granting access to the API. Stream tokens (X-Stream-Token header) sit above that: they are issued per user per device, stored in the stream_tokens table with expiry and rotation, and gate the actual stream and playback endpoints.</p>
+              <h2 className="content-heading">Three layer <em>auth system</em></h2>
+              <p className="content-text">The auth model has three layers, each scoped differently. The admin key (X-Admin-Key header) is a single secret stored as an environment variable with IP based brute force lockout: five failed attempts triggers a fifteen minute block. Client API keys (X-Client-Key header) live in RDS and authenticate the external agency globally, granting access to the API. Stream tokens (X-Stream-Token header) sit above that: they are issued per user per device, stored in the stream_tokens table with expiry and rotation, and gate the actual stream and playback endpoints.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>Revoking a client key is a single database record change (is_active = FALSE). Revoking the admin key requires rotating the environment variable. Stream tokens expire automatically and can be invalidated individually.</p>
             </div>
 
             <div className="content-block">
               <div className="sec-label">Outcome</div>
               <h2 className="content-heading">In production, <em>integrated and shipping</em></h2>
-              <p className="content-text">The API server is live on AWS EC2 and integrated in production with P Circle, the agency-built consumer app for the automotive OEM. Camera streams, controls, and clip retrieval all flow through the API layer I built. Infrastructure work (EC2, RDS provisioning, security groups, Nginx TLS, systemd) was handled in-house alongside the application code.</p>
+              <p className="content-text">The API server is live on AWS EC2 and integrated in production with P Circle, the agency built consumer app for the automotive OEM. Camera streams, controls, and clip retrieval all flow through the API layer I built. Infrastructure work (EC2, RDS provisioning, security groups, Nginx TLS, systemd) was handled in house alongside the application code.</p>
             </div>
 
           </div>
@@ -138,7 +138,7 @@ export default function CCTVPage() {
           <div className="proj-sidebar">
             <div className="sidebar-block">
               <div className="sidebar-label">Role</div>
-              <div className="sidebar-val">CCTV: solo delivery (API design, C bindings, auth, deployment). Perodua Q VE wider programme: mainly support-level integration on supplier technology locally.</div>
+              <div className="sidebar-val">CCTV: solo delivery (API design, C bindings, auth, deployment). Perodua Q VE wider programme: mainly support level integration on supplier technology locally.</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Timeline</div>
@@ -161,7 +161,7 @@ export default function CCTVPage() {
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Integration</div>
-              <div className="sidebar-val">P Circle: agency-owned UI; this API backs in-charger CCTV features.</div>
+              <div className="sidebar-val">P Circle: agency owned UI; this API backs CCTV features in the charger.</div>
             </div>
           </div>
         </div>

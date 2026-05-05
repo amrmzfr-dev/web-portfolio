@@ -67,10 +67,10 @@ export function EvInstallationHeroDiagram() {
               </div>
             </div>
             <ul className="ozone-hero-diagram__list">
-              <li>Mobile-first installer view</li>
+              <li>Mobile first installer view</li>
               <li>Site survey and photo capture</li>
               <li>Installation and commissioning steps</li>
-              <li>Role-scoped actions only</li>
+              <li>Role scoped actions only</li>
             </ul>
           </div>
 

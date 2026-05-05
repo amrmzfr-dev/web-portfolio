@@ -1935,7 +1935,7 @@ code {
 .ti-val  { color: #b8b8b8; }
 .ti-val.avail { color: #3ecf5a; }
 
-/* ── SECTION ALTERNATION — hardcoded dark/white regardless of theme ── */
+/* ── SECTION ALTERNATION: hardcoded dark/white regardless of theme ── */
 #hero, #stack, #contact {
   position: relative;
   background: #0d0d0d;
@@ -1962,7 +1962,7 @@ code {
   --bg-deep:   #f0f0f0;
 }
 
-/* ── PROJECT PAGE ALTERNATION — hardcoded regardless of theme ── */
+/* ── PROJECT PAGE ALTERNATION: hardcoded regardless of theme ── */
 .proj-hero, .proj-nav {
   position: relative;
   background: #0d0d0d;

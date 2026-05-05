@@ -38,7 +38,7 @@ export function HeroIllustration() {
           <div className="ti-row">
             <span className="ti-key">role</span>
             <span className="ti-sep">:</span>
-            <span className="ti-val">full-stack + iot</span>
+            <span className="ti-val">full stack + iot</span>
           </div>
           <div className="ti-row">
             <span className="ti-key">loc</span>

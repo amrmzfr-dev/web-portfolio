@@ -101,7 +101,7 @@ export default function HomePage() {
                   <div className="tl-role">Bachelor of Computer Science (Netcentric Computing)</div>
                   <div className="tl-where">Universiti Teknologi MARA (UiTM) · Jasin, Melaka</div>
                   <div className="tl-desc">Built a foundation in web and software development through HTML, JavaScript, Python, PHP, and Java, while gaining exposure to embedded systems.</div>
-                  <div className="tl-desc">Later picked up Go and Rust to focus on building more efficient, high-performance backend systems.</div>
+                  <div className="tl-desc">Later picked up Go and Rust to focus on building more efficient, high performance backend systems.</div>
                 </div>
               </div>
               <div className="tl-item">
@@ -199,7 +199,7 @@ export default function HomePage() {
             <div className="proj-card-num">02</div>
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             <div className="proj-card-name">CCTV API Server</div>
-            <div className="proj-card-desc">Perodua Q VE programme: mostly supplier-integration support; CCTV API was hands-on—Python REST over Dahua NetSDK (C), into P Circle via agency.</div>
+            <div className="proj-card-desc">Perodua Q VE programme: mostly supplier integration support; CCTV API was hands-on, Python REST over Dahua NetSDK (C), into P Circle via agency.</div>
             <div className="proj-card-tags">
               <span className="tag">Python</span>
               <span className="tag">NetSDK</span>
