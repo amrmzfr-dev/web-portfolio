@@ -73,22 +73,24 @@ export default function CCTVPage() {
                 </div>
                 <p className="gallery-caption">Our charger hardware: camera lives on the unit the API talks to</p>
               </div>
-              <p className="content-text" style={{ marginTop: '1.5rem' }}>Before handing the API to the agency I built a minimal prototype app to validate every endpoint against real hardware on site. The second photo is from that field session: live stream pulled from the charger camera, rendered on device, standing next to the unit it is talking to.</p>
-              <div className="proj-dashboard-capture">
-                <div className="photo-frame">
-                  <Image
-                    src="/images/cctv/prototype-app-field.jpg"
-                    alt="Prototype app showing live CCTV stream from the charger camera, tested on site next to the hardware"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                    sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
-                  />
-                  <div className="photo-corner tl" />
-                  <div className="photo-corner tr" />
-                  <div className="photo-corner bl" />
-                  <div className="photo-corner br" />
+              <div style={{ display: 'flex', gap: '2rem', alignItems: 'flex-start', marginTop: '1.5rem' }}>
+                <p className="content-text" style={{ flex: 1, margin: 0 }}>Before handing the API to the agency I built a minimal prototype app to validate every endpoint against real hardware on site. The photo here is from that field session: live stream pulled from the charger camera, rendered on device, standing next to the unit it is talking to.</p>
+                <div style={{ flexShrink: 0, width: '200px' }}>
+                  <div className="photo-frame" style={{ position: 'relative', aspectRatio: '9/16' }}>
+                    <Image
+                      src="/images/cctv/prototype-app-field.jpg"
+                      alt="Prototype app showing live CCTV stream from the charger camera, tested on site next to the hardware"
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      sizes="200px"
+                    />
+                    <div className="photo-corner tl" />
+                    <div className="photo-corner tr" />
+                    <div className="photo-corner bl" />
+                    <div className="photo-corner br" />
+                  </div>
+                  <p className="gallery-caption" style={{ marginTop: '0.5rem' }}>Prototype app, live stream on site</p>
                 </div>
-                <p className="gallery-caption">Prototype app pulling a live stream from the charger camera, validated on site</p>
               </div>
             </div>
 
