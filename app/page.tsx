@@ -269,7 +269,7 @@ export default function HomePage() {
                 <span className="social-handle">@amrmzfr-dev</span>
                 <span className="social-arrow">↗</span>
               </a>
-              <a href="#" className="social-item">
+              <a href="https://www.linkedin.com/in/muzaffar-amir-ab-jalal-25b834406/" target="_blank" rel="noopener noreferrer" className="social-item">
                 <span className="social-name">LinkedIn</span>
                 <span className="social-handle">Amir · Full Stack Engineer</span>
                 <span className="social-arrow">↗</span>
