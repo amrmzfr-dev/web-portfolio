@@ -1,8 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export function ScrollReveal() {
+  const pathname = usePathname()
+
   useEffect(() => {
     const els = document.querySelectorAll<HTMLElement>('.fade-up')
     const observer = new IntersectionObserver(
@@ -18,7 +21,7 @@ export function ScrollReveal() {
     )
     els.forEach((el) => observer.observe(el))
     return () => observer.disconnect()
-  }, [])
+  }, [pathname])
 
   return null
 }

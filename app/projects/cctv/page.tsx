@@ -19,7 +19,7 @@ export default function CCTVPage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-            <p className="proj-subtitle">On the Perodua Q VE EV charger programme I spent most of my time on support level integration: local work to land technology from outside suppliers. The exception was CCTV in the charger. I owned this stack end to end: a REST bridge over Dahua&apos;s C NetSDK on our hardware, integrated into P Circle by the agency.</p>
+            <p className="proj-subtitle">On the Perodua Q VE EV charger programme, I worked mainly on support-level integration, landing technology from outside suppliers. The exception was CCTV in the charger, where I built a REST bridge over Dahua&apos;s C NetSDK on our hardware, integrated into P Circle by the agency.</p>
             <div className="proj-tags-row">
               <span className="tag">Python</span>
               <span className="tag">Dahua NetSDK</span>
@@ -72,6 +72,23 @@ export default function CCTVPage() {
                   <div className="photo-corner br" />
                 </div>
                 <p className="gallery-caption">Our charger hardware: camera lives on the unit the API talks to</p>
+              </div>
+              <p className="content-text" style={{ marginTop: '1.5rem' }}>Before handing the API to the agency I built a minimal prototype app to validate every endpoint against real hardware on site. The second photo is from that field session: live stream pulled from the charger camera, rendered on device, standing next to the unit it is talking to.</p>
+              <div className="proj-dashboard-capture">
+                <div className="photo-frame">
+                  <Image
+                    src="/images/cctv/prototype-app-field.jpg"
+                    alt="Prototype app showing live CCTV stream from the charger camera, tested on site next to the hardware"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
+                  />
+                  <div className="photo-corner tl" />
+                  <div className="photo-corner tr" />
+                  <div className="photo-corner bl" />
+                  <div className="photo-corner br" />
+                </div>
+                <p className="gallery-caption">Prototype app pulling a live stream from the charger camera, validated on site</p>
               </div>
             </div>
 
