@@ -100,7 +100,7 @@ export default function EVPage() {
                     src="/images/ev/dashboard.png"
                     alt="EV installation platform admin dashboard showing jobs, completion rate, and live activity"
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
                   />
                   <div className="photo-corner tl" />
@@ -116,7 +116,7 @@ export default function EVPage() {
                     src="/images/ev/new-installation.png"
                     alt="Create new installation form with map, customer details, and recommended installers"
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     sizes="(max-width: 900px) 100vw, min(52rem, 90vw)"
                   />
                   <div className="photo-corner tl" />
