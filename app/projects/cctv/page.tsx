@@ -60,7 +60,7 @@ export default function CCTVPage() {
               <div className="proj-dashboard-capture">
                 <div className="photo-frame">
                   <Image
-                    src="/images/cctv/ev-charger-camera.png"
+                    src="/images/cctv/ev-charger-camera.jpg"
                     alt="Company EV charger unit showing integrated CCTV hardware served by this API"
                     fill
                     style={{ objectFit: 'contain' }}
