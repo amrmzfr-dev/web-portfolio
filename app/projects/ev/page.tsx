@@ -178,7 +178,6 @@ export default function EVPage() {
 
         <div className="proj-nav">
           <Link href="/projects/cctv" className="proj-nav-prev">← CCTV API Server</Link>
-          <Link href="/projects/adas" className="proj-nav-next">Next: ADAS Research System →</Link>
         </div>
 
       </div>

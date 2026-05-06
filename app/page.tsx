@@ -223,6 +223,7 @@ export default function HomePage() {
             <div className="proj-card-cta">View case study →</div>
           </Link>
 
+          {/* ADAS card hidden — page not ready
           <Link href="/projects/adas" className="proj-card fade-up" style={{ '--delay': '0.3s' } as React.CSSProperties}>
             <div className="proj-card-num">04</div>
             <div className="proj-status wip"><div className="proj-status-dot"></div>Pilot phase</div>
@@ -236,6 +237,7 @@ export default function HomePage() {
             </div>
             <div className="proj-card-cta">View case study →</div>
           </Link>
+          */}
 
         </div>
       </section>
