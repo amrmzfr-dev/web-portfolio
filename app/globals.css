@@ -90,6 +90,8 @@ nav {
   width: auto;
   height: 34px;
   object-fit: contain;
+  transform: scale(1.6);
+  transform-origin: left center;
 }
 
 .nav-links {
