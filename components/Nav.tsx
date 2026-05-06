@@ -5,7 +5,7 @@ export function Nav() {
   return (
     <nav>
       <Link href="/" className="nav-name">
-        <Image src="/logo.png" alt="Amir Dev" width={32} height={32} className="nav-logo-img" />
+        <Image src="/logo.png" alt="Amir Dev" width={96} height={96} className="nav-logo-img" />
       </Link>
       <ul className="nav-links">
         <li><Link href="/#about">About</Link></li>
