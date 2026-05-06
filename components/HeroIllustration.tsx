@@ -5,7 +5,7 @@ const LINES: { delay: string; cls: string; text: string }[] = [
   { delay: '0.75s', cls: 'out', text: 'go · rust · react · ts' },
   { delay: '1.05s', cls: 'out', text: 'esp32 · psql · docker · axum' },
   { delay: '1.6s',  cls: 'cmd', text: '$ ls ./projects' },
-  { delay: '1.95s', cls: 'out', text: '3 live in production · 1 pilot phase' },
+  { delay: '1.95s', cls: 'out', text: '3 live in production' },
   { delay: '2.5s',  cls: 'cmd', text: '$ status' },
   { delay: '2.85s', cls: 'out', text: 'open to freelance work ✓' },
 ]

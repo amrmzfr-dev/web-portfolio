@@ -50,7 +50,6 @@ export default function HomePage() {
             <div className="hero-v2-portrait-badge">
               <div className="hero-v2-badge-label">Live in production</div>
               <div className="hero-v2-badge-stat">3 ✓</div>
-              <div className="hero-v2-badge-sub">+ 1 pilot phase</div>
             </div>
             <div className="hero-v2-portrait-code">
               <div><span className="hero-v2-code-key">$ whoami</span></div>
