@@ -14,13 +14,13 @@ function DiagramConnector({ labelTop }: ConnectorProps) {
 export function EvInstallationHeroDiagram() {
   return (
     <div
-      className="ozone-hero-diagram ozone-hero-diagram--compact cctv-hero-diagram--simple"
+      className="ozone-hero-diagram cctv-hero-diagram cctv-hero-diagram--simple"
       role="img"
-      aria-label="Field installer React app talks REST to Go Gin backend and PostgreSQL; admin dashboard for operations."
+      aria-label="Field installer React app talks REST to Go Gin backend; admin dashboard for fleet operations."
     >
       <div className="hero-diagram-scroll">
-        <div className="ozone-hero-diagram__row">
-          <div className="ozone-hero-diagram__panel ozone-hero-diagram__panel--hw">
+        <div className="cctv-hero-diagram__grid">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--cam cctv-hero-diagram__node--cam">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Field</div>
@@ -32,9 +32,11 @@ export function EvInstallationHeroDiagram() {
             </ul>
           </div>
 
-          <DiagramConnector labelTop="HTTPS" />
+          <div className="cctv-hero-diagram__node--c1">
+            <DiagramConnector labelTop="HTTPS" />
+          </div>
 
-          <div className="ozone-hero-diagram__panel ozone-hero-diagram__panel--be">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--api cctv-hero-diagram__node--api">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Backend</div>
@@ -46,9 +48,11 @@ export function EvInstallationHeroDiagram() {
             </ul>
           </div>
 
-          <DiagramConnector labelTop="REST API" />
+          <div className="cctv-hero-diagram__node--c2">
+            <DiagramConnector labelTop="REST API" />
+          </div>
 
-          <div className="ozone-hero-diagram__panel ozone-hero-diagram__panel--fe">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--app cctv-hero-diagram__node--app">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Admin</div>

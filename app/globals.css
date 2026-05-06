@@ -1169,25 +1169,6 @@ footer {
   container-name: hero-diagram;
 }
 
-/* Compact variant: panels sized to content, centered in illo */
-.ozone-hero-diagram--compact {
-  width: fit-content;
-  max-width: 100%;
-}
-
-.ozone-hero-diagram--compact .hero-diagram-scroll {
-  width: auto;
-}
-
-.ozone-hero-diagram--compact .hero-diagram-scroll > .ozone-hero-diagram__row {
-  width: auto;
-}
-
-.ozone-hero-diagram--compact .hero-diagram-scroll .ozone-hero-diagram__panel {
-  flex: 0 0 auto;
-  min-width: 120px;
-}
-
 /* Fluid frame: diagram fills column width, no horizontal scroll */
 .hero-diagram-scroll {
   width: 100%;

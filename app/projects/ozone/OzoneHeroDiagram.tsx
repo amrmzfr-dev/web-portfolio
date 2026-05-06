@@ -14,13 +14,13 @@ function DiagramConnector({ labelTop }: ConnectorProps) {
 export function OzoneHeroDiagram() {
   return (
     <div
-      className="ozone-hero-diagram ozone-hero-diagram--compact cctv-hero-diagram--simple"
+      className="ozone-hero-diagram cctv-hero-diagram cctv-hero-diagram--simple"
       role="img"
-      aria-label="Ozone machine ESP32 posts sessions over WiFi to a Go Gin backend and PostgreSQL, then a React TypeScript dashboard per client."
+      aria-label="Ozone machine ESP32 posts sessions to a Go Gin backend and PostgreSQL, served by a React TypeScript dashboard."
     >
       <div className="hero-diagram-scroll">
-        <div className="ozone-hero-diagram__row">
-          <div className="ozone-hero-diagram__panel ozone-hero-diagram__panel--hw">
+        <div className="cctv-hero-diagram__grid">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--cam cctv-hero-diagram__node--cam">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Ozone Machine</div>
@@ -32,9 +32,11 @@ export function OzoneHeroDiagram() {
             </ul>
           </div>
 
-          <DiagramConnector labelTop="POST /session" />
+          <div className="cctv-hero-diagram__node--c1">
+            <DiagramConnector labelTop="POST /session" />
+          </div>
 
-          <div className="ozone-hero-diagram__panel ozone-hero-diagram__panel--be">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--api cctv-hero-diagram__node--api">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Backend</div>
@@ -46,9 +48,11 @@ export function OzoneHeroDiagram() {
             </ul>
           </div>
 
-          <DiagramConnector labelTop="REST API" />
+          <div className="cctv-hero-diagram__node--c2">
+            <DiagramConnector labelTop="REST API" />
+          </div>
 
-          <div className="ozone-hero-diagram__panel ozone-hero-diagram__panel--fe">
+          <div className="ozone-hero-diagram__panel cctv-hero-diagram__panel--app cctv-hero-diagram__node--app">
             <div className="ozone-hero-diagram__panel-head">
               <div>
                 <div className="ozone-hero-diagram__panel-title">Frontend</div>
