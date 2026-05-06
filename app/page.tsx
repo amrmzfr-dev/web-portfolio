@@ -285,7 +285,6 @@ export default function HomePage() {
             <p className="contact-note">I take on freelance projects for full stack web apps, IoT systems, and internal tooling. If you have something to build and want someone who can own it end to end, reach out.</p>
             <div className="contact-links-stack">
               <a href="mailto:amr.mzfr.dev@outlook.com" className="contact-email-link">amr.mzfr.dev@outlook.com</a>
-              <a href="https://wa.link/rn2s6y" target="_blank" rel="noopener noreferrer" className="contact-email-link">WhatsApp</a>
             </div>
           </div>
           <div className="contact-right fade-up" style={{ '--delay': '0.12s' } as React.CSSProperties}>
@@ -301,7 +300,7 @@ export default function HomePage() {
                 <span className="social-handle">Amir · Full Stack Engineer</span>
                 <span className="social-arrow">↗</span>
               </a>
-              <a href="#" className="social-item">
+              <a href="https://wa.link/rn2s6y" target="_blank" rel="noopener noreferrer" className="social-item">
                 <span className="social-name">WhatsApp</span>
                 <span className="social-handle">Quick chat · MY timezone</span>
                 <span className="social-arrow">↗</span>
