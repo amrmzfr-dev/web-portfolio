@@ -16,7 +16,7 @@ export function Nav() {
       <div className="nav-right">
         <div className="nav-avail">
           <div className="avail-dot"></div>
-          Seeking first freelance client
+          Open to freelance work
         </div>
       </div>
     </nav>

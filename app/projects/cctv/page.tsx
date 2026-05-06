@@ -95,7 +95,7 @@ export default function CCTVPage() {
             <div className="content-block">
               <div className="sec-label">Architecture</div>
               <h2 className="content-heading">Python wrapping <em>native C</em>, on AWS</h2>
-              <p className="content-text">The core challenge was surfacing the Dahua NetSDK as a stable, authenticated HTTP API. I integrated Dahua&apos;s NetSDK Python package (ctypes bindings over the C DLL), then built a REST layer on top: Flask routes, Gunicorn workers, Nginx reverse proxy with TLS termination via Let&apos;s Encrypt. The server runs in Listen Server mode: cameras actively register inbound connections rather than the server polling them. That is what makes the system work without opening firewall rules on the camera side.</p>
+              <p className="content-text">The core challenge was surfacing the Dahua NetSDK as a stable, authenticated HTTP API. I integrated Dahua&apos;s NetSDK Python package (ctypes bindings over the C DLL), then built a REST layer on top: Flask routes, Gunicorn workers, Nginx reverse proxy with TLS termination via Let&apos;s Encrypt. Python was the natural fit here: Dahua ships official Python bindings over ctypes, making it the lowest-friction path to the C DLL without writing raw FFI from scratch. The server runs in Listen Server mode: cameras actively register inbound connections rather than the server polling them. That is what makes the system work without opening firewall rules on the camera side.</p>
               <p className="content-text" style={{ marginTop: '1rem' }}>The API server runs on AWS EC2. The database is AWS RDS MySQL 8.0, reached from EC2 over a private endpoint with security group rules restricting access. Credentials and secrets load from environment variables via a systemd service and are never committed to version control.</p>
               <div className="arch-diagram">
                 <div className="arch-layer">
@@ -175,6 +175,7 @@ export default function CCTVPage() {
                 <div>AWS EC2 · AlmaLinux · systemd</div>
                 <div>Nginx · Let&apos;s Encrypt TLS</div>
               </div>
+              <div className="sidebar-footnote">MySQL used on this project, predating my current stack standardisation on PostgreSQL.</div>
             </div>
             <div className="sidebar-block">
               <div className="sidebar-label">Integration</div>

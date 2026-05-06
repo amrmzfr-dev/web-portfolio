@@ -52,7 +52,7 @@ export default function EVPage() {
             <div className="content-block">
               <div className="sec-label">The problem</div>
               <h2 className="content-heading">Installing chargers <em>without chaos</em></h2>
-              <p className="content-text">At C Zero Sdn Bhd, installations were managed manually through spreadsheets, WhatsApp, and phone calls. As volume grew across hundreds of outsourced installers registered under us, tracking assignment, site survey completion, and commissioning status became a real operational problem. We needed a system that gave clear visibility across the full installation lifecycle.</p>
+              <p className="content-text">At C Zero Sdn Bhd, installations were managed manually through spreadsheets, WhatsApp, and phone calls. With 68 registered installer companies across Malaysia and active expansion ongoing, tracking assignment, site survey completion, and commissioning status became a real operational problem. We needed a system that gave clear visibility across the full installation lifecycle.</p>
             </div>
 
             <div className="content-block">

@@ -56,7 +56,7 @@ export default function HomePage() {
               <div><span className="hero-v2-code-key">$ whoami</span></div>
               <div><span className="hero-v2-code-val">amir</span> · full stack + iot</div>
               <div><span className="hero-v2-code-key">loc</span> · shah alam, my</div>
-              <div><span className="hero-v2-code-key">open</span> · <span className="hero-v2-code-val">first freelance client ✓</span> <span className="hero-v2-code-cursor" /></div>
+              <div><span className="hero-v2-code-key">open</span> · <span className="hero-v2-code-val">freelance work ✓</span> <span className="hero-v2-code-cursor" /></div>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function HomePage() {
               <p>I&apos;ve worked across the stack, building web applications, APIs, and systems that interact with real hardware. I choose tools based on what fits the problem and I&apos;m comfortable picking up new technologies when needed.</p>
               <p>I work fast and often use modern tools, including AI, to speed things up, but I stay careful with what I ship, making sure it&apos;s stable and maintainable.</p>
               <p>I enjoy thinking through systems end to end and also getting into the details to make things work.</p>
-              <p>Currently, I&apos;m looking for my first part time freelance projects in full stack development, IoT systems, or internal tools.</p>
+              <p>Currently taking on part time freelance projects in full stack development, IoT systems, or internal tools.</p>
               <p>Outside of coding, I spend time on games, random IoT ideas, and probably too much coffee.</p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
                 <div>
                   <div className="tl-role">Freelance, open to opportunities (part time)</div>
                   <div className="tl-where">Remote · MY timezone</div>
-                  <div className="tl-desc">Actively looking for my first freelance client, part time, alongside my full time role. Focus areas: full stack development, IoT systems, and internal tools.</div>
+                  <div className="tl-desc">Taking on freelance projects part time, alongside my full time role. Focus areas: full stack development, IoT systems, and internal tools.</div>
                 </div>
               </div>
             </div>
@@ -152,6 +152,7 @@ export default function HomePage() {
               <div className="stack-item"><div className="stack-dot"></div><span>Rust / Axum</span></div>
               <div className="stack-item"><div className="stack-dot"></div><span>REST APIs</span></div>
               <div className="stack-item"><div className="stack-dot"></div><span>PostgreSQL</span></div>
+              <div className="stack-item"><div className="stack-dot"></div><span>Python (SDK / integration constraints)</span></div>
             </div>
           </div>
           <div className="stack-cat fade-up" style={{ '--delay': '0.16s' } as React.CSSProperties}>
@@ -282,10 +283,9 @@ export default function HomePage() {
           <div className="contact-left fade-up">
             <div className="sec-label">Get in touch</div>
             <h2 className="sec-heading">Let&apos;s work<br /><em>together</em></h2>
-            <p className="contact-note">I&apos;m looking for my first freelance clients for full stack web apps, IoT systems, and internal tooling. If you have something to build and want someone who can own it end to end, reach out.</p>
+            <p className="contact-note">I take on freelance projects for full stack web apps, IoT systems, and internal tooling. If you have something to build and want someone who can own it end to end, reach out.</p>
             <div className="contact-links-stack">
               <a href="mailto:amr.mzfr.dev@outlook.com" className="contact-email-link">amr.mzfr.dev@outlook.com</a>
-              <a href="tel:+60129693454" className="contact-phone-link">+6012 969 3454</a>
             </div>
           </div>
           <div className="contact-right fade-up" style={{ '--delay': '0.12s' } as React.CSSProperties}>

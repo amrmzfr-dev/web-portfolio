@@ -7,7 +7,7 @@ const LINES: { delay: string; cls: string; text: string }[] = [
   { delay: '1.6s',  cls: 'cmd', text: '$ ls ./projects' },
   { delay: '1.95s', cls: 'out', text: '3 live in production · 1 pilot phase' },
   { delay: '2.5s',  cls: 'cmd', text: '$ status' },
-  { delay: '2.85s', cls: 'out', text: 'seeking first freelance client ✓' },
+  { delay: '2.85s', cls: 'out', text: 'open to freelance work ✓' },
 ]
 
 export function HeroIllustration() {
@@ -53,7 +53,7 @@ export function HeroIllustration() {
           <div className="ti-row">
             <span className="ti-key">open</span>
             <span className="ti-sep">:</span>
-            <span className="ti-val avail">first freelance ✓</span>
+            <span className="ti-val avail">freelance work ✓</span>
           </div>
         </div>
       </div>
