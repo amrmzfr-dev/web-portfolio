@@ -292,7 +292,7 @@ footer {
   object-fit: contain;
   opacity: 0.7;
   transform: scale(2.8);
-  transform-origin: left center;
+  transform-origin: center center;
 }
 
 .footer-neroki {
