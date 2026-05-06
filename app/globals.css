@@ -1154,8 +1154,7 @@ footer {
 .ozone-hero-diagram {
   width: 100%;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   font-family: var(--sans);
   opacity: 0.94;
   container-type: inline-size;
