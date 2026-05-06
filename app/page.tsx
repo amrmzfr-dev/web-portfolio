@@ -240,6 +240,31 @@ export default function HomePage() {
           */}
 
         </div>
+
+        <div className="also-shipped fade-up" style={{ '--delay': '0.35s' } as React.CSSProperties}>
+          <div className="also-shipped__label">Also shipped</div>
+          <div className="also-shipped__row">
+            <a href="https://www.c-zero.my" target="_blank" rel="noopener noreferrer" className="also-shipped__card">
+              <div className="also-shipped__name">c-zero.my</div>
+              <div className="also-shipped__desc">C Zero EV Charger public website</div>
+              <div className="also-shipped__meta">
+                <span className="tag">Next.js</span>
+                <span className="tag">Marketing</span>
+                <span className="also-shipped__link">Visit →</span>
+              </div>
+            </a>
+            <a href="https://www.mesraekuiti.com" target="_blank" rel="noopener noreferrer" className="also-shipped__card">
+              <div className="also-shipped__name">mesraekuiti.com</div>
+              <div className="also-shipped__desc">Ozone machine promotional website</div>
+              <div className="also-shipped__meta">
+                <span className="tag">Next.js</span>
+                <span className="tag">Marketing</span>
+                <span className="also-shipped__link">Visit →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
       </section>
 
       {/* CONTACT */}

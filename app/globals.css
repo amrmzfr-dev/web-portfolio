@@ -956,6 +956,81 @@ footer {
 
 .proj-card:hover .proj-card-cta { color: var(--orange); }
 
+/* ── ALSO SHIPPED ── */
+.also-shipped {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.also-shipped__label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.also-shipped__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 560px) {
+  .also-shipped__row { grid-template-columns: 1fr; }
+}
+
+.also-shipped__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.025);
+  text-decoration: none;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.also-shipped__card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.also-shipped__name {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.also-shipped__desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.also-shipped__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.also-shipped__link {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-left: auto;
+  transition: color 0.18s;
+}
+
+.also-shipped__card:hover .also-shipped__link { color: var(--orange); }
+
 /* ── CONTACT ── */
 #contact { background: var(--bg); transition: background 0.3s; }
 
