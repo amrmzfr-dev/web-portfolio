@@ -1,9 +1,12 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function Nav() {
   return (
     <nav>
-      <Link href="/" className="nav-name">amir.dev</Link>
+      <Link href="/" className="nav-name">
+        <Image src="/logo.png" alt="Amir Dev" width={32} height={32} className="nav-logo-img" />
+      </Link>
       <ul className="nav-links">
         <li><Link href="/#about">About</Link></li>
         <li><Link href="/#stack">Stack</Link></li>
