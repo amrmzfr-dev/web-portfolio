@@ -14,7 +14,7 @@ function DiagramConnector({ labelTop }: ConnectorProps) {
 export function OzoneHeroDiagram() {
   return (
     <div
-      className="ozone-hero-diagram cctv-hero-diagram--simple"
+      className="ozone-hero-diagram ozone-hero-diagram--compact cctv-hero-diagram--simple"
       role="img"
       aria-label="Ozone machine ESP32 posts sessions over WiFi to a Go Gin backend and PostgreSQL, then a React TypeScript dashboard per client."
     >

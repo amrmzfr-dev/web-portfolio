@@ -1141,9 +1141,8 @@ footer {
 }
 
 .proj-hero-illo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   width: 100%;
   min-width: 0;
   padding: 12px;
@@ -1159,6 +1158,25 @@ footer {
   opacity: 0.94;
   container-type: inline-size;
   container-name: hero-diagram;
+}
+
+/* Compact variant: panels sized to content, centered in illo */
+.ozone-hero-diagram--compact {
+  width: fit-content;
+  max-width: 100%;
+}
+
+.ozone-hero-diagram--compact .hero-diagram-scroll {
+  width: auto;
+}
+
+.ozone-hero-diagram--compact .hero-diagram-scroll > .ozone-hero-diagram__row {
+  width: auto;
+}
+
+.ozone-hero-diagram--compact .hero-diagram-scroll .ozone-hero-diagram__panel {
+  flex: 0 0 auto;
+  min-width: 120px;
 }
 
 /* Fluid frame: diagram fills column width, no horizontal scroll */
@@ -1666,6 +1684,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.proj-tags-row .tag {
+  color: var(--text-mid);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .proj-hero-link-note {

@@ -14,7 +14,7 @@ function DiagramConnector({ labelTop }: ConnectorProps) {
 export function EvInstallationHeroDiagram() {
   return (
     <div
-      className="ozone-hero-diagram cctv-hero-diagram--simple"
+      className="ozone-hero-diagram ozone-hero-diagram--compact cctv-hero-diagram--simple"
       role="img"
       aria-label="Field installer React app talks REST to Go Gin backend and PostgreSQL; admin dashboard for operations."
     >
