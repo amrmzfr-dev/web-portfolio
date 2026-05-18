@@ -19,7 +19,7 @@ export default function CCTVPage() {
               <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             </div>
             <h1 className="proj-title">CCTV<br /><em>API Server</em></h1>
-            <p className="proj-subtitle">On the Perodua Q VE EV charger programme, I worked mainly on support-level integration, landing technology from outside suppliers. The exception was CCTV in the charger, where I built a REST bridge over Dahua&apos;s C NetSDK on our hardware, integrated into P Circle by the agency.</p>
+            <p className="proj-subtitle">I built a REST API bridging Dahua&apos;s C-based NetSDK to the web: three-layer authentication, AWS EC2 deployment, and live integration with P Circle for the Perodua Q VE EV charger programme.</p>
             <div className="proj-tags-row">
               <span className="tag">Python</span>
               <span className="tag">Dahua NetSDK</span>

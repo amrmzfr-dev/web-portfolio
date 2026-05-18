@@ -16,8 +16,8 @@ export default function HomePage() {
         <div className="hero-v2-left">
           <span className="hero-v2-eyebrow">Hey, I&apos;m</span>
           <h1 className="hero-v2-name">Amir</h1>
-          <p className="hero-v2-role">Full Stack Developer</p>
-          <p className="hero-v2-meta">Based in Malaysia (GMT+8)</p>
+          <p className="hero-v2-role">Full Stack + IoT Engineer</p>
+          <p className="hero-v2-meta">3 systems in production · Malaysia &amp; Indonesia · Automotive clients</p>
           <p className="hero-v2-desc">
             I build <strong>complete systems</strong>, from ESP32 firmware on hardware to production dashboards used in real environments. I work across <strong>backend, frontend, DevOps, and embedded</strong>.
             <br /><br />
@@ -55,7 +55,7 @@ export default function HomePage() {
               <div><span className="hero-v2-code-key">$ whoami</span></div>
               <div><span className="hero-v2-code-val">amir</span> · full stack + iot</div>
               <div><span className="hero-v2-code-key">loc</span> · shah alam, my</div>
-              <div><span className="hero-v2-code-key">open</span> · <span className="hero-v2-code-val">freelance work ✓</span> <span className="hero-v2-code-cursor" /></div>
+              <div><span className="hero-v2-code-key">status</span> · <span className="hero-v2-code-val">open to hire</span> <span className="hero-v2-code-cursor" /></div>
             </div>
           </div>
         </div>
@@ -73,12 +73,9 @@ export default function HomePage() {
           <div>
             <h2 className="sec-heading fade-up" style={{ '--delay': '0.08s' } as React.CSSProperties}>I build things<br />that <em>actually ship</em></h2>
             <div className="story-text fade-up" style={{ '--delay': '0.16s' } as React.CSSProperties}>
-              <p>I graduated with a Computer Science degree (Netcentric Computing) and started my career in a startup environment, where I had to learn quickly and take ownership of what I built.</p>
-              <p>I&apos;ve worked across the stack, building web applications, APIs, and systems that interact with real hardware. I choose tools based on what fits the problem and I&apos;m comfortable picking up new technologies when needed.</p>
-              <p>I work fast and often use modern tools, including AI, to speed things up, but I stay careful with what I ship, making sure it&apos;s stable and maintainable.</p>
-              <p>I enjoy thinking through systems end to end and also getting into the details to make things work.</p>
-              <p>Currently taking on part time freelance projects in full stack development, IoT systems, or internal tools.</p>
-              <p>Outside of coding, I spend time on games, random IoT ideas, and probably too much coffee.</p>
+              <p>I graduated with a Computer Science degree (Netcentric Computing) and built my career in a startup, taking ownership of what I shipped—from web platforms and APIs to embedded/IoT devices running in production.</p>
+              <p>I pick tools for the problem: Go for team services and APIs, Rust when performance and safety matter, React and TypeScript on the frontend. I work fast with modern tooling but ship code that stays stable and maintainable.</p>
+              <p>I&apos;m looking for a full-time engineering role where I can own complex systems end to end—from firmware through backend to dashboard—not just one layer of the stack.</p>
             </div>
           </div>
           <div>
@@ -108,14 +105,6 @@ export default function HomePage() {
                 <div>
                   <div className="tl-role">Diploma in Computer Science</div>
                   <div className="tl-where">Universiti Teknologi MARA (UiTM) · Raub, Pahang</div>
-                </div>
-              </div>
-              <div className="tl-item">
-                <div className="tl-year">Side Track</div>
-                <div>
-                  <div className="tl-role">Freelance, open to opportunities (part time)</div>
-                  <div className="tl-where">Remote · MY timezone</div>
-                  <div className="tl-desc">Taking on freelance projects part time, alongside my full time role. Focus areas: full stack development, IoT systems, and internal tools.</div>
                 </div>
               </div>
             </div>
@@ -185,7 +174,7 @@ export default function HomePage() {
             <div className="proj-card-num">01</div>
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             <div className="proj-card-name">Ozone Machine IoT System</div>
-            <div className="proj-card-desc">Full stack IoT system for ozone machine management: ESP32 firmware through Go backend to React dashboard, serving real automotive industry clients.</div>
+            <div className="proj-card-desc">IoT billing system for ozone machines — ESP32 firmware through Go backend to React dashboard. Live across automotive service centres in Malaysia and Indonesia.</div>
             <div className="proj-card-tags">
               <span className="tag">ESP32</span>
               <span className="tag">Go</span>
@@ -199,7 +188,7 @@ export default function HomePage() {
             <div className="proj-card-num">02</div>
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             <div className="proj-card-name">CCTV API Server</div>
-            <div className="proj-card-desc">Perodua Q VE programme: mostly supplier integration support; CCTV API was hands-on, Python REST over Dahua NetSDK (C), into P Circle via agency.</div>
+            <div className="proj-card-desc">REST API bridging Dahua&apos;s C NetSDK to the web — three-layer auth, AWS-deployed, live in the Perodua Q VE EV charger programme via P Circle.</div>
             <div className="proj-card-tags">
               <span className="tag">Python</span>
               <span className="tag">NetSDK</span>
@@ -213,7 +202,7 @@ export default function HomePage() {
             <div className="proj-card-num">03</div>
             <div className="proj-status"><div className="proj-status-dot"></div>Live in production</div>
             <div className="proj-card-name">EV Charger Installation Platform</div>
-            <div className="proj-card-desc">End to end installation management system for internal operations at C Zero Sdn Bhd. Tracks installers, site surveys, and commissioning workflows.</div>
+            <div className="proj-card-desc">Installation management platform replacing spreadsheet + WhatsApp ops for 68 installer companies across Malaysia. Full workflow: survey to commissioning sign-off.</div>
             <div className="proj-card-tags">
               <span className="tag">React</span>
               <span className="tag">TypeScript</span>
@@ -282,7 +271,7 @@ export default function HomePage() {
           <div className="contact-left fade-up">
             <div className="sec-label">Get in touch</div>
             <h2 className="sec-heading">Let&apos;s work<br /><em>together</em></h2>
-            <p className="contact-note">I take on freelance projects for full stack web apps, IoT systems, and internal tooling. If you have something to build and want someone who can own it end to end, reach out.</p>
+            <p className="contact-note">Open to full-time engineering roles and select freelance work. If you need someone who can own a system end to end — firmware to frontend — reach out.</p>
             <div className="contact-links-stack">
               <a href="mailto:amr.mzfr.dev@outlook.com" className="contact-email-link">amr.mzfr.dev@outlook.com</a>
             </div>

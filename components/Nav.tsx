@@ -13,12 +13,6 @@ export function Nav() {
         <li><Link href="/#projects">Projects</Link></li>
         <li><Link href="/#contact">Contact</Link></li>
       </ul>
-      <div className="nav-right">
-        <div className="nav-avail">
-          <div className="avail-dot"></div>
-          Open to freelance work
-        </div>
-      </div>
     </nav>
   )
 }
